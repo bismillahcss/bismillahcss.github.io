@@ -2,14 +2,15 @@ import Link from "next/link"
 import { ArrowRight, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+
 const posts = [
   {
     title: "Introducing BismillahCSS v1.0",
     description:
       "Today we're excited to announce the official release of BismillahCSS v1.0, the next-gen CSS framework for modern web development.",
     date: "March 15, 2024",
-    author: "Ahmed Khan",
-    authorImage: "/placeholder.svg?height=40&width=40",
+    author: "Mubashir Ali",
+    authorImage: "images/mubashir.png",
     category: "Release",
     slug: "introducing-bismillahcss-v1",
     image: "/placeholder.svg?height=300&width=600",
