@@ -51,7 +51,7 @@ export default function Home() {
             </p>
             <div className="flex gap-4 justify-center">
               <GlowButton asChild>
-                <Link href="https://github.com/bismillahcss/framework">
+                <Link href="https://github.com/bismillahcss/bismillahcss" target="_blank">
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Link>

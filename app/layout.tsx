@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "BismillahCSS - The Next-Gen CSS Framework",
   description: "Fast, lightweight, utility-first CSS framework for modern web development",
-    generator: 'v0.dev'
+  
 }
 
 export default function RootLayout({
@@ -23,7 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
+      <Link rel="icon" href="./images/bismillah-logo.png" />
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex min-h-screen flex-col">
@@ -45,3 +46,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import Link from 'next/link'

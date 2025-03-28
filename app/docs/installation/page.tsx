@@ -2,6 +2,7 @@ import React from 'react'
 import { CodeBlock } from "@/components/code-block"
 import { PageTransition } from "@/components/page-transition"
 
+
 export default function InstallationPage() {
   return (
     <PageTransition>
@@ -22,7 +23,7 @@ export default function InstallationPage() {
               Just add the following &lt;link&gt; tag inside your HTML &lt;head&gt;:
             </p>
             <CodeBlock language="html">
-              {`<!DOCTYPE html>
+         {`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

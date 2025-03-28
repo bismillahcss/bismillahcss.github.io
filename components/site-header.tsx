@@ -54,7 +54,7 @@ export function SiteHeader() {
           </Button>
 
           <Button variant="ghost" size="icon" asChild className="hidden md:flex">
-            <Link href="https://github.com/bismillahcss/framework">
+            <Link href="https://github.com/bismillahcss/">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
@@ -91,7 +91,7 @@ export function SiteHeader() {
             ))}
             <div className="pt-4 flex flex-col gap-2">
               <Button variant="outline" size="sm" className="justify-start" asChild>
-                <Link href="https://github.com/bismillahcss/framework">
+                <Link href="https://github.com/bismillahcss">
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Link>

@@ -67,7 +67,7 @@ export default function DocsPage() {
               <Link href="/community">Join the Community</Link>
             </GlowButton>
             <GlowButton variant="outline" asChild>
-              <Link href="https://github.com/bismillahcss/framework/issues/new">Report an Issue</Link>
+              <Link href="https://github.com/bismillahcss">Report an Issue</Link>
             </GlowButton>
           </div>
         </div>
