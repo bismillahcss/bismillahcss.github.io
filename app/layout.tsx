@@ -24,7 +24,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Link rel="icon" href="./images/bismillah-logo.png" />
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex min-h-screen flex-col">

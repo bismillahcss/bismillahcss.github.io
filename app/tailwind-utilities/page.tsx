@@ -44,8 +44,8 @@ export default function TailwindUtilitiesPage() {
           </div>
 
           <div className="mb-10 p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 shadow-lg">
-            <CodeBlock
-              code={`<div class="bismillah-flex bismillah-flex-col bismillah-items-center bismillah-rounded-2xl">
+            <CodeBlock language="html">
+              {`<div class="bismillah-flex bismillah-flex-col bismillah-items-center bismillah-rounded-2xl">
   <div>
     <img class="bismillah-size-48 bismillah-shadow-xl" alt="" src="/img/cover.png" />
   </div>
@@ -59,8 +59,7 @@ export default function TailwindUtilitiesPage() {
     </span>
   </div>
 </div>`}
-              language="html"
-            />
+            </CodeBlock>
           </div>
 
           <Tabs defaultValue="layout" value={activeCategory} onValueChange={setActiveCategory} className="w-full">
