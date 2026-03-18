@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BismillahCSS Framework Showcase</title>
-  
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css">
+  <link rel="stylesheet" href="./attractive.css">
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <style>
     :root {
       --bismillah-primary-color: #4361ee;
@@ -18,13 +21,13 @@
       --bismillah-danger-color: #e74c3c;
       --bismillah-warning-color: #f39c12;
       --bismillah-info-color: #3498db;
-      
+
       --bismillah-gradient-start: #4361ee;
       --bismillah-gradient-end: #7209b7;
-      
+
       --bismillah-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    
+
     body {
       font-family: var(--bismillah-font-family);
       margin: 0;
@@ -34,13 +37,13 @@
       transition: background-color 0.3s ease, color 0.3s ease;
       text-decoration: none;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
     }
-    
+
     .section {
       margin-bottom: 5rem;
       padding: 2rem;
@@ -49,7 +52,7 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       transition: background-color 0.3s ease;
     }
-    
+
     .section-title {
       margin-top: 0;
       margin-bottom: 2rem;
@@ -58,23 +61,23 @@
       padding-bottom: 0.5rem;
       font-size: 2rem;
     }
-    
+
     .component-demo {
       margin-bottom: 3rem;
     }
-    
+
     .component-title {
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
       color: #555;
     }
-    
+
     .demo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
-    
+
     .theme-switcher {
       position: fixed;
       bottom: 20px;
@@ -85,19 +88,19 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       padding: 1rem;
     }
-    
+
     .theme-switcher h3 {
       margin-top: 0;
       margin-bottom: 1rem;
       font-size: 1rem;
     }
-    
+
     .theme-options {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    
+
     .theme-option {
       width: 30px;
       height: 30px;
@@ -106,13 +109,14 @@
       border: 2px solid transparent;
       transition: all 0.2s ease;
     }
-    
-    .theme-option:hover, .theme-option.active {
+
+    .theme-option:hover,
+    .theme-option.active {
       transform: scale(1.1);
       border-color: #fff;
       box-shadow: 0 0 0 2px var(--color);
     }
-    
+
     .code-block {
       background-color: #f5f5f5;
       border-radius: 6px;
@@ -123,56 +127,56 @@
       overflow-x: auto;
       color: #333;
     }
-    
+
     .dark .code-block {
       background-color: #2d2d2d;
       color: #e0e0e0;
     }
-    
+
     .dark .section {
       background-color: #1e1e1e;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
-    
+
     .dark .theme-switcher {
       background-color: #1e1e1e;
       color: #e0e0e0;
     }
-    
+
     .example-box {
       padding: 1.5rem;
       border: 1px solid #e5e7eb;
       border-radius: 8px;
       margin-bottom: 1.5rem;
     }
-    
+
     .dark .example-box {
       border-color: #333;
     }
-    
+
     /* Scrollbar for the page */
     html {
       scrollbar-width: thin;
       scrollbar-color: var(--bismillah-primary-color) #f1f1f1;
     }
-    
+
     html::-webkit-scrollbar {
       width: 10px;
     }
-    
+
     html::-webkit-scrollbar-track {
       background: #f1f1f1;
     }
-    
+
     html::-webkit-scrollbar-thumb {
       background: var(--bismillah-primary-color);
       border-radius: 5px;
     }
-    
+
     .dark html::-webkit-scrollbar-track {
       background: #2a2a2a;
     }
-    
+
     /* Scrollbar demo containers */
     .scrollbar-demo {
       height: 150px;
@@ -182,22 +186,22 @@
       border-radius: 8px;
       margin-bottom: 1rem;
     }
-    
+
     .dark .scrollbar-demo {
       background-color: #2a2a2a;
     }
-    
+
     .scrollbar-content {
       height: 400px;
     }
-    
+
     /* Animation demo */
     .animation-demo {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
     }
-    
+
     .animation-item {
       width: 100px;
       height: 100px;
@@ -209,7 +213,7 @@
       font-weight: bold;
       border-radius: 8px;
     }
-    
+
     /* Cartoon demo */
     .cartoon-demo {
       display: flex;
@@ -217,7 +221,7 @@
       gap: 2rem;
       justify-content: center;
     }
-    
+
     /* Back to top button */
     .back-to-top {
       position: fixed;
@@ -240,18 +244,19 @@
       opacity: 0;
       visibility: hidden;
     }
-    
+
     .back-to-top.visible {
       opacity: 1;
       visibility: visible;
     }
-    
+
     .back-to-top:hover {
       transform: translateY(-5px);
     }
   </style>
 </head>
-<body class="bismillah-theme-apply" >
+
+<body class="bismillah-theme-apply">
   <!-- Navbar -->
   <nav class="bismillah-navbar">
     <div class="bismillah-navbar-container">
@@ -259,7 +264,7 @@
         <img src="https://via.placeholder.com/40" alt="Logo">
         <span>BismillahCSS</span>
       </a>
-      
+
       <div class="bismillah-navbar-links">
         <a href="#navbar" class="bismillah-navbar-link">Navbar</a>
         <a href="#forms" class="bismillah-navbar-link">Forms</a>
@@ -276,7 +281,7 @@
         <a href="#text-decoration" class="bismillah-navbar-link">Text Decoration</a>
         <a href="#cartoons" class="bismillah-navbar-link">Cartoons</a>
       </div>
-      
+
       <div class="bismillah-navbar-right">
         <a href="#" class="bismillah-navbar-cta">
           <i class="fas fa-download"></i> Download
@@ -290,16 +295,20 @@
     <div class="bismillah-hero-container">
       <div class="bismillah-hero-content">
         <h1 class="bismillah-hero-title">BismillahCSS Framework</h1>
-        <p class="bismillah-hero-subtitle">A beautiful, responsive, and accessible CSS framework for modern web development</p>
+        <p class="bismillah-hero-subtitle">A beautiful, responsive, and accessible CSS framework for modern web
+          development</p>
         <div class="bismillah-hero-actions">
           <a href="#" class="bismillah-form-btn bismillah-form-btn-primary bismillah-form-btn-lg">Get Started</a>
-          <a href="#" class="bismillah-form-btn bismillah-form-btn-outline-primary bismillah-form-btn-lg">Documentation</a>
+          <a href="#"
+            class="bismillah-form-btn bismillah-form-btn-outline-primary bismillah-form-btn-lg">Documentation</a>
         </div>
       </div>
     </div>
     <div class="bismillah-hero-waves-bottom">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="bismillah-hero-wave-fill"></path>
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="bismillah-hero-wave-fill"></path>
       </svg>
     </div>
   </section>
@@ -308,7 +317,7 @@
     <!-- Navbar Section -->
     <section id="navbar" class="section">
       <h2 class="section-title">Navbar</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Default Navbar</h3>
         <div class="example-box">
@@ -318,7 +327,7 @@
                 <img src="https://via.placeholder.com/40" alt="Logo">
                 <span>BismillahCSS</span>
               </a>
-              
+
               <div class="bismillah-navbar-links">
                 <a href="#" class="bismillah-navbar-link active">Home</a>
                 <a href="#" class="bismillah-navbar-link">Features</a>
@@ -326,7 +335,7 @@
                 <a href="#" class="bismillah-navbar-link">About</a>
                 <a href="#" class="bismillah-navbar-link">Contact</a>
               </div>
-              
+
               <div class="bismillah-navbar-right">
                 <a href="#" class="bismillah-navbar-cta">
                   <i class="fas fa-sign-in-alt"></i> Login
@@ -336,7 +345,7 @@
           </nav>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Navbar with Dropdown</h3>
         <div class="example-box">
@@ -346,7 +355,7 @@
                 <img src="https://via.placeholder.com/40" alt="Logo">
                 <span>BismillahCSS</span>
               </a>
-              
+
               <div class="bismillah-navbar-links">
                 <a href="#" class="bismillah-navbar-link active">Home</a>
                 <div class="bismillah-navbar-dropdown">
@@ -364,7 +373,7 @@
                 <a href="#" class="bismillah-navbar-link">About</a>
                 <a href="#" class="bismillah-navbar-link">Contact</a>
               </div>
-              
+
               <div class="bismillah-navbar-right">
                 <div class="bismillah-navbar-search">
                   <input type="text" class="bismillah-search-input" placeholder="Search...">
@@ -385,11 +394,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Forms Section -->
     <section id="forms" class="section">
       <h2 class="section-title">Forms</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Login Form</h3>
         <div class="example-box">
@@ -398,12 +407,12 @@
               <h2 class="bismillah-form-title">Login to Your Account</h2>
               <p class="bismillah-form-subtitle">Enter your credentials to access your account</p>
             </div>
-            
+
             <div class="bismillah-form-group">
               <label for="email" class="bismillah-form-label required">Email</label>
               <input type="email" id="email" class="bismillah-form-input" placeholder="Enter your email">
             </div>
-            
+
             <div class="bismillah-form-group">
               <label for="password" class="bismillah-form-label required">Password</label>
               <div class="bismillah-form-password">
@@ -413,7 +422,7 @@
                 </button>
               </div>
             </div>
-            
+
             <div class="bismillah-form-group">
               <div class="bismillah-form-check">
                 <input type="checkbox" id="remember" class="bismillah-form-check-input">
@@ -421,20 +430,23 @@
                 <label for="remember" class="bismillah-form-check-label">Remember me</label>
               </div>
             </div>
-            
-            <button type="submit" class="bismillah-form-btn bismillah-form-btn-primary" style="width: 100%;">Login</button>
-            
+
+            <button type="submit" class="bismillah-form-btn bismillah-form-btn-primary"
+              style="width: 100%;">Login</button>
+
             <div class="bismillah-form-divider">
               <span class="bismillah-form-divider-text">OR</span>
             </div>
-            
+
             <div class="bismillah-form-group">
-              <button type="button" class="bismillah-form-btn bismillah-form-btn-outline-primary bismillah-form-btn-icon" style="width: 100%;">
+              <button type="button"
+                class="bismillah-form-btn bismillah-form-btn-outline-primary bismillah-form-btn-icon"
+                style="width: 100%;">
                 <i class="fab fa-google"></i>
                 <span>Continue with Google</span>
               </button>
             </div>
-            
+
             <div class="bismillah-form-footer">
               <span>Don't have an account?</span>
               <a href="#">Sign up</a>
@@ -442,7 +454,7 @@
           </form>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Form Elements</h3>
         <div class="example-box">
@@ -461,7 +473,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="bismillah-form-row">
               <div class="bismillah-form-col-md-6">
                 <div class="bismillah-form-group">
@@ -477,11 +489,12 @@
               <div class="bismillah-form-col-md-6">
                 <div class="bismillah-form-group">
                   <label for="textarea-input" class="bismillah-form-label">Textarea</label>
-                  <textarea id="textarea-input" class="bismillah-form-input bismillah-form-textarea" placeholder="Textarea"></textarea>
+                  <textarea id="textarea-input" class="bismillah-form-input bismillah-form-textarea"
+                    placeholder="Textarea"></textarea>
                 </div>
               </div>
             </div>
-            
+
             <div class="bismillah-form-row">
               <div class="bismillah-form-col-md-6">
                 <div class="bismillah-form-group">
@@ -514,7 +527,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="bismillah-form-row">
               <div class="bismillah-form-col-md-6">
                 <div class="bismillah-form-group">
@@ -535,7 +548,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="bismillah-form-row">
               <div class="bismillah-form-col-md-6">
                 <div class="bismillah-form-group">
@@ -559,7 +572,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="bismillah-form-group">
               <button type="submit" class="bismillah-form-btn bismillah-form-btn-primary">Submit</button>
               <button type="reset" class="bismillah-form-btn bismillah-form-btn-secondary">Reset</button>
@@ -568,11 +581,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Breadcrumbs Section -->
     <section id="breadcrumbs" class="section">
       <h2 class="section-title">Breadcrumbs</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Default Breadcrumbs</h3>
         <div class="example-box">
@@ -595,7 +608,7 @@
           </nav>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Breadcrumbs with Background</h3>
         <div class="example-box">
@@ -616,7 +629,7 @@
           </nav>
         </div>
       </div>
-      
+
       <div class="demo-grid">
         <div class="component-demo">
           <h3 class="component-title">Pill Breadcrumbs</h3>
@@ -634,7 +647,7 @@
             </nav>
           </div>
         </div>
-        
+
         <div class="component-demo">
           <h3 class="component-title">Arrow Breadcrumbs</h3>
           <div class="example-box">
@@ -653,11 +666,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Tables Section -->
     <section id="tables" class="section">
       <h2 class="section-title">Tables</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Default Table</h3>
         <div class="example-box">
@@ -699,7 +712,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="demo-grid">
         <div class="component-demo">
           <h3 class="component-title">Striped Table</h3>
@@ -739,7 +752,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="component-demo">
           <h3 class="component-title">Bordered Table</h3>
           <div class="example-box">
@@ -780,11 +793,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Typography Section -->
     <section id="typography" class="section">
       <h2 class="section-title">Typography</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Headings</h3>
         <div class="example-box">
@@ -796,7 +809,7 @@
           <h6 class="bismillah-h6">Heading 6</h6>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Display Headings</h3>
         <div class="example-box">
@@ -806,16 +819,17 @@
           <h1 class="bismillah-display-1">Display 1</h1>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Paragraphs</h3>
         <div class="example-box">
           <p class="bismillah-p lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
-          <p class="bismillah-p">This is a regular paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+          <p class="bismillah-p">This is a regular paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
           <p class="bismillah-p small">This is a smaller paragraph with less emphasis.</p>
         </div>
       </div>
-      
+
       <div class="demo-grid">
         <div class="component-demo">
           <h3 class="component-title">Text Colors</h3>
@@ -829,7 +843,7 @@
             <p class="bismillah-text-muted">Muted Text</p>
           </div>
         </div>
-        
+
         <div class="component-demo">
           <h3 class="component-title">Text Styles</h3>
           <div class="example-box">
@@ -843,68 +857,80 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Scrollbar Section -->
     <section id="scrollbar" class="section">
       <h2 class="section-title">Scrollbar</h2>
-      
+
       <div class="demo-grid">
         <div class="component-demo">
           <h3 class="component-title">Default Scrollbar</h3>
           <div class="scrollbar-demo bismillah-scrollbar">
             <div class="scrollbar-content">
               <p>Scroll down to see the custom scrollbar in action.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
-              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu
+                sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse
+                dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
             </div>
           </div>
         </div>
-        
+
         <div class="component-demo">
           <h3 class="component-title">Thin Scrollbar</h3>
           <div class="scrollbar-demo bismillah-scrollbar-thin">
             <div class="scrollbar-content">
               <p>Scroll down to see the thin scrollbar in action.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
-              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu
+                sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse
+                dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="demo-grid">
         <div class="component-demo">
           <h3 class="component-title">Colored Scrollbar</h3>
           <div class="scrollbar-demo bismillah-scrollbar-primary">
             <div class="scrollbar-content">
               <p>Scroll down to see the colored scrollbar in action.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
-              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu
+                sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse
+                dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
             </div>
           </div>
         </div>
-        
+
         <div class="component-demo">
           <h3 class="component-title">Gradient Scrollbar</h3>
           <div class="scrollbar-demo bismillah-scrollbar-gradient">
             <div class="scrollbar-content">
               <p>Scroll down to see the gradient scrollbar in action.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
-              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu
+                sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse
+                dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim
+                congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Accordion Section -->
     <section id="accordion" class="section">
       <h2 class="section-title">Accordion</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Default Accordion</h3>
         <div class="example-box">
@@ -917,7 +943,9 @@
               </h2>
               <div class="bismillah-accordion-collapse">
                 <div class="bismillah-accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+                  <strong>This is the first item's accordion body.</strong> It is shown by default. Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie
+                  vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
                 </div>
               </div>
             </div>
@@ -929,7 +957,9 @@
               </h2>
               <div class="bismillah-accordion-collapse">
                 <div class="bismillah-accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default. Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie
+                  vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
                 </div>
               </div>
             </div>
@@ -941,14 +971,16 @@
               </h2>
               <div class="bismillah-accordion-collapse">
                 <div class="bismillah-accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default. Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie
+                  vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="demo-grid">
         <div class="component-demo">
           <h3 class="component-title">Flush Accordion</h3>
@@ -981,7 +1013,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="component-demo">
           <h3 class="component-title">Bordered Accordion</h3>
           <div class="example-box">
@@ -1015,46 +1047,52 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Themes Section -->
     <section id="themes" class="section">
       <h2 class="section-title">Themes</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Available Themes</h3>
         <div class="example-box">
           <div class="demo-grid">
-            <div class="theme-preview bismillah-theme-apply" style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div class="theme-preview bismillah-theme-apply"
+              style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
               <h4>Default Theme</h4>
               <p>The default light theme with blue primary color.</p>
               <button class="bismillah-form-btn bismillah-form-btn-primary">Primary Button</button>
             </div>
-            
-            <div class="theme-preview bismillah-theme-dark bismillah-theme-apply" style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+            <div class="theme-preview bismillah-theme-dark bismillah-theme-apply"
+              style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
               <h4>Dark Theme</h4>
               <p>A dark theme with light text and blue accents.</p>
               <button class="bismillah-form-btn bismillah-form-btn-primary">Primary Button</button>
             </div>
-            
-            <div class="theme-preview bismillah-theme-blue bismillah-theme-apply" style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+            <div class="theme-preview bismillah-theme-blue bismillah-theme-apply"
+              style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
               <h4>Blue Theme</h4>
               <p>A light theme with blue color palette.</p>
               <button class="bismillah-form-btn bismillah-form-btn-primary">Primary Button</button>
             </div>
-            
-            <div class="theme-preview bismillah-theme-green bismillah-theme-apply" style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+            <div class="theme-preview bismillah-theme-green bismillah-theme-apply"
+              style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
               <h4>Green Theme</h4>
               <p>A light theme with green color palette.</p>
               <button class="bismillah-form-btn bismillah-form-btn-primary">Primary Button</button>
             </div>
-            
-            <div class="theme-preview bismillah-theme-purple bismillah-theme-apply" style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+            <div class="theme-preview bismillah-theme-purple bismillah-theme-apply"
+              style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
               <h4>Purple Theme</h4>
               <p>A light theme with purple color palette.</p>
               <button class="bismillah-form-btn bismillah-form-btn-primary">Primary Button</button>
             </div>
-            
-            <div class="theme-preview bismillah-theme-cyberpunk bismillah-theme-apply" style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+
+            <div class="theme-preview bismillah-theme-cyberpunk bismillah-theme-apply"
+              style="padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
               <h4>Cyberpunk Theme</h4>
               <p>A dark theme with neon accents.</p>
               <button class="bismillah-form-btn bismillah-form-btn-primary">Primary Button</button>
@@ -1063,11 +1101,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Animations Section -->
     <section id="animations" class="section">
       <h2 class="section-title">Animations</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Basic Animations</h3>
         <div class="example-box">
@@ -1081,7 +1119,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Text Animations</h3>
         <div class="example-box">
@@ -1091,11 +1129,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Alerts Section -->
     <section id="alerts" class="section">
       <h2 class="section-title">Alerts</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Basic Alerts</h3>
         <div class="example-box">
@@ -1108,7 +1146,7 @@
               <p>This is a primary alert — check it out!</p>
             </div>
           </div>
-          
+
           <div class="bismillah-alert bismillah-alert-success">
             <div class="bismillah-alert-icon">
               <i class="fas fa-check-circle"></i>
@@ -1118,7 +1156,7 @@
               <p>This is a success alert — check it out!</p>
             </div>
           </div>
-          
+
           <div class="bismillah-alert bismillah-alert-warning">
             <div class="bismillah-alert-icon">
               <i class="fas fa-exclamation-triangle"></i>
@@ -1128,7 +1166,7 @@
               <p>This is a warning alert — check it out!</p>
             </div>
           </div>
-          
+
           <div class="bismillah-alert bismillah-alert-danger">
             <div class="bismillah-alert-icon">
               <i class="fas fa-times-circle"></i>
@@ -1140,7 +1178,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Alert Styles</h3>
         <div class="example-box">
@@ -1153,7 +1191,7 @@
               <p>This is an outlined alert — check it out!</p>
             </div>
           </div>
-          
+
           <div class="bismillah-alert bismillah-alert-success bismillah-alert-solid">
             <div class="bismillah-alert-icon">
               <i class="fas fa-check-circle"></i>
@@ -1163,7 +1201,7 @@
               <p>This is a solid alert — check it out!</p>
             </div>
           </div>
-          
+
           <div class="bismillah-alert bismillah-alert-warning bismillah-alert-left-border">
             <div class="bismillah-alert-icon">
               <i class="fas fa-exclamation-triangle"></i>
@@ -1173,7 +1211,7 @@
               <p>This is a left border alert — check it out!</p>
             </div>
           </div>
-          
+
           <div class="bismillah-alert bismillah-alert-danger bismillah-alert-dismissible">
             <div class="bismillah-alert-icon">
               <i class="fas fa-times-circle"></i>
@@ -1189,11 +1227,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Avatars Section -->
     <section id="avatars" class="section">
       <h2 class="section-title">Avatars</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Avatar Sizes</h3>
         <div class="example-box" style="display: flex; align-items: center; gap: 1rem;">
@@ -1214,40 +1252,40 @@
           </div>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Avatar Types</h3>
         <div class="example-box" style="display: flex; align-items: center; gap: 1rem;">
           <div class="bismillah-avatar">
             <img src="https://via.placeholder.com/150" alt="User" class="bismillah-avatar-img">
           </div>
-          
+
           <div class="bismillah-avatar">
             <span class="bismillah-avatar-initials">JD</span>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-icon">
             <i class="fas fa-user"></i>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-primary">
             <span class="bismillah-avatar-initials">JD</span>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-success">
             <span class="bismillah-avatar-initials">JD</span>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-warning">
             <span class="bismillah-avatar-initials">JD</span>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-danger">
             <span class="bismillah-avatar-initials">JD</span>
           </div>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Avatar Features</h3>
         <div class="example-box" style="display: flex; align-items: center; gap: 1.5rem;">
@@ -1255,16 +1293,16 @@
             <img src="https://via.placeholder.com/150" alt="User" class="bismillah-avatar-img">
             <span class="bismillah-avatar-status bismillah-avatar-status-online"></span>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-badge">
             <img src="https://via.placeholder.com/150" alt="User" class="bismillah-avatar-img">
             <span class="bismillah-avatar-badge">3</span>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-bordered">
             <img src="https://via.placeholder.com/150" alt="User" class="bismillah-avatar-img">
           </div>
-          
+
           <div class="bismillah-avatar-group">
             <div class="bismillah-avatar">
               <img src="https://via.placeholder.com/150" alt="User" class="bismillah-avatar-img">
@@ -1276,18 +1314,18 @@
               <span class="bismillah-avatar-initials">+2</span>
             </div>
           </div>
-          
+
           <div class="bismillah-avatar bismillah-avatar-interactive">
             <img src="https://via.placeholder.com/150" alt="User" class="bismillah-avatar-img">
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Hero Section -->
     <section id="hero" class="section">
       <h2 class="section-title">Hero Sections</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Default Hero</h3>
         <div class="example-box">
@@ -1305,7 +1343,7 @@
           </section>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Hero with Gradient Background</h3>
         <div class="example-box">
@@ -1322,7 +1360,7 @@
           </section>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Split Hero</h3>
         <div class="example-box">
@@ -1343,11 +1381,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Text Decoration Section -->
     <section id="text-decoration" class="section">
       <h2 class="section-title">Text Decoration</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Underline Styles</h3>
         <div class="example-box">
@@ -1358,17 +1396,21 @@
           <p class="bismillah-underline-double" style="font-size: 1.25rem; margin-bottom: 1rem;">Double Underline</p>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Underline Colors</h3>
         <div class="example-box">
-          <p class="bismillah-underline bismillah-underline-primary" style="font-size: 1.25rem; margin-bottom: 1rem;">Primary Underline</p>
-          <p class="bismillah-underline bismillah-underline-secondary" style="font-size: 1.25rem; margin-bottom: 1rem;">Secondary Underline</p>
-          <p class="bismillah-underline bismillah-underline-success" style="font-size: 1.25rem; margin-bottom: 1rem;">Success Underline</p>
-          <p class="bismillah-underline bismillah-underline-danger" style="font-size: 1.25rem; margin-bottom: 1rem;">Danger Underline</p>
+          <p class="bismillah-underline bismillah-underline-primary" style="font-size: 1.25rem; margin-bottom: 1rem;">
+            Primary Underline</p>
+          <p class="bismillah-underline bismillah-underline-secondary" style="font-size: 1.25rem; margin-bottom: 1rem;">
+            Secondary Underline</p>
+          <p class="bismillah-underline bismillah-underline-success" style="font-size: 1.25rem; margin-bottom: 1rem;">
+            Success Underline</p>
+          <p class="bismillah-underline bismillah-underline-danger" style="font-size: 1.25rem; margin-bottom: 1rem;">
+            Danger Underline</p>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Special Text Effects</h3>
         <div class="example-box">
@@ -1380,22 +1422,26 @@
           <p class="bismillah-text-retro" style="font-size: 2rem; margin-bottom: 1rem;">Retro Text</p>
         </div>
       </div>
-      
+
       <div class="component-demo">
         <h3 class="component-title">Highlight Styles</h3>
         <div class="example-box">
-          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span class="bismillah-highlight">default highlight</span> effect.</p>
-          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span class="bismillah-highlight-primary">primary highlight</span> effect.</p>
-          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span class="bismillah-highlight-success">success highlight</span> effect.</p>
-          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span class="bismillah-highlight-danger">danger highlight</span> effect.</p>
+          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span class="bismillah-highlight">default
+              highlight</span> effect.</p>
+          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span
+              class="bismillah-highlight-primary">primary highlight</span> effect.</p>
+          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span
+              class="bismillah-highlight-success">success highlight</span> effect.</p>
+          <p style="font-size: 1.25rem; margin-bottom: 1rem;">This text has a <span
+              class="bismillah-highlight-danger">danger highlight</span> effect.</p>
         </div>
       </div>
     </section>
-    
+
     <!-- Cartoons Section -->
     <section id="cartoons" class="section">
       <h2 class="section-title">Cartoons</h2>
-      
+
       <div class="component-demo">
         <h3 class="component-title">CSS Cartoon Characters</h3>
         <div class="example-box">
@@ -1412,7 +1458,7 @@
               </div>
               <p style="text-align: center; margin-top: 1rem;">Mickey Mouse</p>
             </div>
-            
+
             <div class="bismillah-cartoon">
               <div class="bismillah-spongebob bismillah-cartoon-blink">
                 <div class="bismillah-spongebob-holes"></div>
@@ -1437,7 +1483,7 @@
               </div>
               <p style="text-align: center; margin-top: 1rem;">SpongeBob</p>
             </div>
-            
+
             <div class="bismillah-cartoon">
               <div class="bismillah-pikachu bismillah-cartoon-bounce">
                 <div class="bismillah-pikachu-ears left"></div>
@@ -1455,7 +1501,7 @@
               </div>
               <p style="text-align: center; margin-top: 1rem;">Pikachu</p>
             </div>
-            
+
             <div class="bismillah-cartoon">
               <div class="bismillah-doraemon bismillah-cartoon-wave">
                 <div class="bismillah-doraemon-face"></div>
@@ -1480,34 +1526,42 @@
       </div>
     </section>
   </div>
-  
+
   <!-- Theme Switcher -->
   <div class="theme-switcher">
     <h3>Theme Switcher</h3>
     <div class="theme-options">
       <div class="theme-option active" data-theme="" style="background-color: #4361ee; --color: #4361ee;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-dark" style="background-color: #121212; --color: #121212;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-blue" style="background-color: #1e40af; --color: #1e40af;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-green" style="background-color: #2f855a; --color: #2f855a;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-purple" style="background-color: #6b46c1; --color: #6b46c1;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-red" style="background-color: #c53030; --color: #c53030;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-orange" style="background-color: #dd6b20; --color: #dd6b20;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-cyberpunk" style="background-color: #0f0f18; --color: #ff3864;"></div>
-      <div class="theme-option" data-theme="bismillah-theme-pastel" style="background-color: #fef6f6; --color: #f8a4bd;"></div>
+      <div class="theme-option" data-theme="bismillah-theme-dark" style="background-color: #121212; --color: #121212;">
+      </div>
+      <div class="theme-option" data-theme="bismillah-theme-blue" style="background-color: #1e40af; --color: #1e40af;">
+      </div>
+      <div class="theme-option" data-theme="bismillah-theme-green" style="background-color: #2f855a; --color: #2f855a;">
+      </div>
+      <div class="theme-option" data-theme="bismillah-theme-purple"
+        style="background-color: #6b46c1; --color: #6b46c1;"></div>
+      <div class="theme-option" data-theme="bismillah-theme-red" style="background-color: #c53030; --color: #c53030;">
+      </div>
+      <div class="theme-option" data-theme="bismillah-theme-orange"
+        style="background-color: #dd6b20; --color: #dd6b20;"></div>
+      <div class="theme-option" data-theme="bismillah-theme-cyberpunk"
+        style="background-color: #0f0f18; --color: #ff3864;"></div>
+      <div class="theme-option" data-theme="bismillah-theme-pastel"
+        style="background-color: #fef6f6; --color: #f8a4bd;"></div>
     </div>
   </div>
-  
+
   <!-- Back to Top Button -->
   <button class="back-to-top">
     <i class="fas fa-arrow-up"></i>
   </button>
-  
+
   <!-- JavaScript -->
   <script>
     // Theme Switcher
     const themeOptions = document.querySelectorAll('.theme-option');
     const body = document.body;
-    
+
     themeOptions.forEach(option => {
       option.addEventListener('click', () => {
         // Remove all theme classes
@@ -1521,32 +1575,32 @@
           'bismillah-theme-cyberpunk',
           'bismillah-theme-pastel'
         );
-        
+
         // Add selected theme class
         const theme = option.getAttribute('data-theme');
         if (theme) {
           body.classList.add(theme);
         }
-        
+
         // Update active state
         themeOptions.forEach(opt => opt.classList.remove('active'));
         option.classList.add('active');
       });
     });
-    
+
     // Accordion Functionality
     document.querySelectorAll('.bismillah-accordion-button').forEach(button => {
       button.addEventListener('click', () => {
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        
+
         // Toggle the current button
         button.classList.toggle('collapsed', isExpanded);
         button.setAttribute('aria-expanded', !isExpanded);
-        
+
         // Find the collapse element
-        const collapseContent = button.parentElement.nextElementSibling || 
-                               button.parentElement.parentElement.querySelector('.bismillah-accordion-collapse');
-        
+        const collapseContent = button.parentElement.nextElementSibling ||
+          button.parentElement.parentElement.querySelector('.bismillah-accordion-collapse');
+
         if (collapseContent) {
           if (isExpanded) {
             collapseContent.style.height = '0';
@@ -1567,13 +1621,13 @@
         }
       });
     });
-    
+
     // Initialize accordions
     document.querySelectorAll('.bismillah-accordion-button').forEach(button => {
       const isExpanded = button.getAttribute('aria-expanded') === 'true';
-      const collapseContent = button.parentElement.nextElementSibling || 
-                             button.parentElement.parentElement.querySelector('.bismillah-accordion-collapse');
-      
+      const collapseContent = button.parentElement.nextElementSibling ||
+        button.parentElement.parentElement.querySelector('.bismillah-accordion-collapse');
+
       if (collapseContent) {
         if (!isExpanded) {
           collapseContent.style.display = 'none';
@@ -1583,7 +1637,7 @@
         }
       }
     });
-    
+
     // Alert Close Button
     document.querySelectorAll('.bismillah-alert-close').forEach(button => {
       button.addEventListener('click', () => {
@@ -1594,13 +1648,13 @@
         }, 300);
       });
     });
-    
+
     // Password Toggle
     document.querySelectorAll('.bismillah-form-password-toggle').forEach(button => {
       button.addEventListener('click', () => {
         const input = button.previousElementSibling;
         const icon = button.querySelector('i');
-        
+
         if (input.type === 'password') {
           input.type = 'text';
           icon.classList.remove('fa-eye');
@@ -1612,10 +1666,10 @@
         }
       });
     });
-    
+
     // Back to Top Button
     const backToTopButton = document.querySelector('.back-to-top');
-    
+
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
         backToTopButton.classList.add('visible');
@@ -1623,18 +1677,18 @@
         backToTopButton.classList.remove('visible');
       }
     });
-    
+
     backToTopButton.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
-    
+
     // Color Input Value Display
     const colorInput = document.getElementById('color-input');
     const colorValue = document.querySelector('.bismillah-form-color-value');
-    
+
     if (colorInput && colorValue) {
       colorInput.addEventListener('input', () => {
         colorValue.textContent = colorInput.value;
@@ -1642,4 +1696,5 @@
     }
   </script>
 </body>
+
 </html>

@@ -1,0 +1,198 @@
+:root {
+    --bismillah-primary-color: #4361ee;
+    --bismillah-secondary-color: #6c757d;
+    --bismillah-success-color: #2ecc71;
+    --bismillah-danger-color: #e74c3c;
+    --bismillah-warning-color: #f39c12;
+    --bismillah-info-color: #3498db;
+    --bismillah-bg-color: #f8f9fa;
+    --bismillah-border-radius: 8px;
+    --bismillah-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --bismillah-primary-hover: #3a56d4;
+    --bismillah-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    background-color: var(--bismillah-bg-color);
+    color: #333;
+    font-family: var(--bismillah-font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Animations */
+@keyframes bismillahFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bismillah-animate-fade-in {
+    animation: bismillahFadeIn 0.5s ease-out forwards;
+}
+
+/* Pikachu */
+.bismillah-pikachu {
+    background: #ffdf00;
+    border: 2px solid #000;
+    border-radius: 50% 50% 40% 40%;
+    height: 180px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+}
+
+.bismillah-pikachu-ears:after,
+.bismillah-pikachu-ears:before {
+    background: #ffdf00;
+    border: 2px solid #000;
+    border-radius: 50% 50% 0 0;
+    content: "";
+    height: 100px;
+    position: absolute;
+    top: -70px;
+    width: 40px;
+}
+
+.bismillah-pikachu-ears:before {
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+.bismillah-pikachu-ears:after {
+    right: 10px;
+    transform: rotate(30deg);
+}
+
+/* Doraemon */
+.bismillah-doraemon {
+    background: #35a1d9;
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 200px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+}
+
+.bismillah-doraemon-face {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 160px;
+    left: 20px;
+    position: absolute;
+    top: 35px;
+    width: 160px;
+}
+
+/* Utilities */
+.bismillah-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+.bismillah-neon-blue {
+    color: #00f2ff;
+    text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+}
+
+.bismillah-neon-pink {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.bismillah-neumorphism {
+    background: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #ffffff;
+}
+
+/* Grid */
+.bismillah-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.bismillah-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bismillah-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Buttons */
+.bismillah-btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.bismillah-btn-primary {
+    background: var(--bismillah-primary-color);
+    color: white;
+}
+
+.bismillah-btn-primary:hover {
+    background: var(--bismillah-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--bismillah-shadow-lg);
+}
+
+/* Navbar */
+.bismillah-navbar {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.bismillah-navbar-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.bismillah-navbar-logo {
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.bismillah-navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .bismillah-grid-3,
+    .bismillah-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
