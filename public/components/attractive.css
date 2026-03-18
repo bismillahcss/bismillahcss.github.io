@@ -1,0 +1,168 @@
+:root {
+    --bismillah-primary-color: #4f46e5;
+    --bismillah-primary-hover: #4338ca;
+    --bismillah-secondary-color: #10b981;
+    --bismillah-secondary-hover: #059669;
+    --bismillah-accent-color: #f43f5e;
+    --bismillah-bg-color: #f8f9fa;
+    --bismillah-text-color: #1f2937;
+    --bismillah-border-radius: 8px;
+    --bismillah-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --bismillah-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --bismillah-transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bismillah-bg-color);
+    color: var(--bismillah-text-color);
+    font-family: var(--bismillah-font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+.bismillah-text-4xl {
+    font-size: 36px;
+}
+
+.bismillah-text-5xl {
+    font-size: 48px;
+}
+
+.bismillah-font-extrabold {
+    font-weight: 800;
+}
+
+/* Buttons */
+.bismillah-btn {
+    border-radius: var(--bismillah-border-radius);
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--bismillah-transition);
+    border: none;
+    display: inline-block;
+}
+
+.bismillah-btn-primary {
+    background-color: var(--bismillah-primary-color);
+    color: white;
+}
+
+.bismillah-btn-primary:hover {
+    background-color: var(--bismillah-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--bismillah-shadow);
+}
+
+.bismillah-btn-secondary {
+    background-color: var(--bismillah-secondary-color);
+    color: white;
+}
+
+.bismillah-btn-secondary:hover {
+    background-color: var(--bismillah-secondary-hover);
+}
+
+/* Glassmorphism */
+.bismillah-glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+/* Neon Effects */
+.bismillah-neon-blue {
+    color: #00f2ff;
+    text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+}
+
+/* Characters Styles */
+/* Pikachu */
+.bismillah-pikachu {
+    background: gold;
+    height: 180px;
+    width: 180px;
+    border-radius: 50% 50% 40% 40%;
+    position: relative;
+    margin: 20px auto;
+    border: 2px solid #000;
+}
+
+.bismillah-pikachu-ears:before,
+.bismillah-pikachu-ears:after {
+    content: "";
+    position: absolute;
+    background: gold;
+    height: 100px;
+    width: 40px;
+    border-radius: 50% 50% 0 0;
+    top: -70px;
+    border: 2px solid #000;
+}
+
+.bismillah-pikachu-ears:before {
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+.bismillah-pikachu-ears:after {
+    right: 10px;
+    transform: rotate(30deg);
+}
+
+/* Doraemon */
+.bismillah-doraemon {
+    background: #1c9fe9;
+    border: 4px solid #000;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.bismillah-doraemon-face {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+/* Grid */
+.bismillah-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.bismillah-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Components */
+.bismillah-navbar {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bismillah-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--bismillah-shadow);
+    transition: transform 0.3s;
+}
+
+.bismillah-card:hover {
+    transform: translateY(-5px);
+}
