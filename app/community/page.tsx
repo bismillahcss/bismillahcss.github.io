@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Github, MessagesSquare, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "Community - BismillahCSS",
+  description: "Join the BismillahCSS community. Connect with other developers, share your projects, and get help with your work.",
+}
 
 const communities = [
   {

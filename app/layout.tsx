@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -11,11 +12,50 @@ import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "BismillahCSS - The Next-Gen CSS Framework",
-  description: "Fast, lightweight, utility-first CSS framework for modern web development",
-  keywords: "CSS framework, utility-first CSS, modern web development, lightweight CSS bismillahcss frontend, tailwindcss-alternative, css-framework, utility-classes, future-css, lightweight-css, advanced-cssutility, firstresponsive-css, framework, bismillahcss, bismillah, css, bismillahcss framework, bismillahcss utility-first, bismillahcss lightweight, code-with-bismillah, bismillahcss components, bismillahcss utilities, bismillahcss responsive, bismillahcss customization, bismillahcss theming, bismillahcss design system, bismillahcss typography, bismillahcss grid, bismillahcss flexbox, bismillahcss animations, bismillahcss transitions",
-  author: "BismillahCSS - Mubashir Ali ",
+  description: "BismillahCSS is a fast, lightweight, utility-first CSS framework for modern web development. Build beautiful interfaces with ease.",
+  keywords: "CSS framework, utility-first CSS, modern web development, lightweight CSS, bismillahcss frontend, tailwindcss-alternative, css-framework, utility-classes, future-css, lightweight-css, advanced-css, utility-first, responsive-css, bismillahcss framework, bismillahcss utility-first, bismillahcss lightweight, code-with-bismillah, bismillahcss components, bismillahcss utilities, bismillahcss responsive, bismillahcss customization, bismillahcss theming, bismillahcss design system, bismillahcss typography, bismillahcss grid, bismillahcss flexbox, bismillahcss animations, bismillahcss transitions",
+  authors: [{ name: "Mubashir Ali" }],
+  verification: {
+    google: "GhJ96yf5IMVcGgy8dgYiIHlTQJxeE6UnaTe4xusCl1k",
+  },
+  openGraph: {
+    title: "BismillahCSS - Fast & Lightweight Utility-First CSS Framework",
+    description: "Build modern, responsive websites faster with BismillahCSS - the future of utility-first CSS.",
+    url: "https://bismillahcss.github.io/",
+    siteName: "BismillahCSS",
+    images: [
+      {
+        url: "/images/bismillah-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "BismillahCSS Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BismillahCSS - Fast & Lightweight Utility-First CSS Framework",
+    description: "Build modern, responsive websites faster with BismillahCSS.",
+    images: ["/images/bismillah-logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: "https://bismillahcss.github.io/",
+  },
 };
 
 export default function RootLayout({
@@ -24,22 +64,47 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="author" content={metadata.author} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bismillahcss.com" />
-        <meta property="og:image" content="./" />
-        <link rel="icon" href="./images/bismillah-logo.png" />
-        <title>{metadata.title}</title>
-      </head>
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "BismillahCSS",
+              "operatingSystem": "Any",
+              "applicationCategory": "DeveloperApplication",
+              "description": "BismillahCSS is a fast, lightweight, utility-first CSS framework for modern web development.",
+              "url": "https://bismillahcss.github.io/",
+              "author": {
+                "@type": "Person",
+                "name": "Mubashir Ali"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "BismillahCSS",
+              "url": "https://bismillahcss.github.io/",
+              "logo": "https://bismillahcss.github.io/images/bismillah-logo.png",
+              "sameAs": [
+                "https://github.com/bismillahcss",
+                "https://twitter.com/bismillahcss"
+              ]
+            })
+          }}
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative flex min-h-screen flex-col">
             <SiteHeader />

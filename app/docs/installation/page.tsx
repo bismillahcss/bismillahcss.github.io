@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import React from 'react'
 import { CodeBlock } from "@/components/code-block"
 import { PageTransition } from "@/components/page-transition"
+
+export const metadata: Metadata = {
+  title: "Installation - BismillahCSS",
+  description: "Learn how to install BismillahCSS via CDN, NPM, or PostCSS. Quick and easy setup for any project.",
+}
 
 
 export default function InstallationPage() {
@@ -23,7 +29,7 @@ export default function InstallationPage() {
               Just add the following &lt;link&gt; tag inside your HTML &lt;head&gt;:
             </p>
             <CodeBlock language="html">
-         {`<!DOCTYPE html>
+              {`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

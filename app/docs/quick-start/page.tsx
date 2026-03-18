@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import React from 'react'
 import { CodeBlock } from "@/components/code-block"
 import { PageTransition } from "@/components/page-transition"
+
+export const metadata: Metadata = {
+  title: "Quick Start - BismillahCSS",
+  description: "Get up and running with BismillahCSS in 5 minutes. Learn the essentials of our utility-first CSS framework.",
+}
 
 export default function QuickStartPage() {
   return (
@@ -13,7 +19,7 @@ export default function QuickStartPage() {
 
         <section className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold">⚡ 5-Minute Setup</h2>
-          
+
           <div className="space-y-2">
             <h3 className="text-xl font-semibold">Step 1: Install via NPM</h3>
             <p className="text-muted-foreground">
@@ -28,11 +34,11 @@ export default function QuickStartPage() {
               In your main CSS file or JavaScript entry point, add:
             </p>
             <CodeBlock language="javascript">
-{`import "bismillahcss/dist/bismillah.css";`}
+              {`import "bismillahcss/dist/bismillah.css";`}
             </CodeBlock>
             <p className="text-muted-foreground">Or in your HTML file:</p>
             <CodeBlock language="html">
-{`<link rel="stylesheet" href="node_modules/bismillahcss/dist/bismillah.css">`}
+              {`<link rel="stylesheet" href="node_modules/bismillahcss/dist/bismillah.css">`}
             </CodeBlock>
           </div>
 
@@ -42,7 +48,7 @@ export default function QuickStartPage() {
               You're ready to go! Start building with utility classes:
             </p>
             <CodeBlock language="html">
-{`<div class="bismillah-flex bismillah-items-center bismillah-justify-center bismillah-h-screen">
+              {`<div class="bismillah-flex bismillah-items-center bismillah-justify-center bismillah-h-screen">
   <button class="bismillah-bg-blue-500 bismillah-text-white bismillah-px-6 bismillah-py-3 bismillah-rounded-lg bismillah-font-semibold hover:bismillah-bg-blue-600 transition-colors">
     Get Started
   </button>
@@ -53,7 +59,7 @@ export default function QuickStartPage() {
 
         <section className="mt-8 space-y-4">
           <h2 className="text-2xl font-bold">📦 Choose Your Method</h2>
-          
+
           <div className="space-y-3">
             <div className="border rounded-lg p-4">
               <h3 className="text-lg font-semibold text-green-600 mb-2">✅ Recommended: NPM + React/Next.js</h3>
@@ -64,7 +70,7 @@ export default function QuickStartPage() {
             <div className="border rounded-lg p-4">
               <h3 className="text-lg font-semibold text-blue-600 mb-2">🚀 Quick: CDN Link</h3>
               <CodeBlock language="html">
-{`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss@latest/dist/bismillah.min.css">`}
+                {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss@latest/dist/bismillah.min.css">`}
               </CodeBlock>
               <p className="text-muted-foreground text-sm mt-2">No installation required, perfect for quick prototypes</p>
             </div>
@@ -84,7 +90,7 @@ export default function QuickStartPage() {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Button Component</h3>
               <CodeBlock language="html">
-{`<button class="bismillah-bg-indigo-600 bismillah-text-white bismillah-px-4 bismillah-py-2 bismillah-rounded-md bismillah-font-medium hover:bismillah-bg-indigo-700 transition-colors">
+                {`<button class="bismillah-bg-indigo-600 bismillah-text-white bismillah-px-4 bismillah-py-2 bismillah-rounded-md bismillah-font-medium hover:bismillah-bg-indigo-700 transition-colors">
   Click me
 </button>`}
               </CodeBlock>
@@ -93,7 +99,7 @@ export default function QuickStartPage() {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Flex Layout</h3>
               <CodeBlock language="html">
-{`<div class="bismillah-flex bismillah-gap-4 bismillah-items-center bismillah-justify-between">
+                {`<div class="bismillah-flex bismillah-gap-4 bismillah-items-center bismillah-justify-between">
   <div class="bismillah-flex-1"></div>
   <div class="bismillah-flex-1"></div>
 </div>`}
@@ -103,7 +109,7 @@ export default function QuickStartPage() {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Grid Layout</h3>
               <CodeBlock language="html">
-{`<div class="bismillah-grid bismillah-grid-cols-3 bismillah-gap-4">
+                {`<div class="bismillah-grid bismillah-grid-cols-3 bismillah-gap-4">
   <div class="bismillah-bg-gray-100 bismillah-p-4 bismillah-rounded">Card 1</div>
   <div class="bismillah-bg-gray-100 bismillah-p-4 bismillah-rounded">Card 2</div>
   <div class="bismillah-bg-gray-100 bismillah-p-4 bismillah-rounded">Card 3</div>
@@ -114,7 +120,7 @@ export default function QuickStartPage() {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Responsive Design</h3>
               <CodeBlock language="html">
-{`<div class="bismillah-grid bismillah-grid-cols-1 md:bismillah-grid-cols-2 lg:bismillah-grid-cols-3 bismillah-gap-4">
+                {`<div class="bismillah-grid bismillah-grid-cols-1 md:bismillah-grid-cols-2 lg:bismillah-grid-cols-3 bismillah-gap-4">
   <div>Responsive item</div>
 </div>`}
               </CodeBlock>
@@ -130,7 +136,7 @@ export default function QuickStartPage() {
           </p>
 
           <CodeBlock language="javascript">
-{`module.exports = {
+            {`module.exports = {
   theme: {
     extend: {
       colors: {
@@ -150,7 +156,7 @@ export default function QuickStartPage() {
           </p>
 
           <CodeBlock language="html">
-{`<div class="bismillah-bg-primary bismillah-p-128">
+            {`<div class="bismillah-bg-primary bismillah-p-128">
   Custom configured styles
 </div>`}
           </CodeBlock>
@@ -187,7 +193,7 @@ export default function QuickStartPage() {
           </p>
 
           <CodeBlock language="html">
-{`<div class="bismillah-text-sm md:bismillah-text-base lg:bismillah-text-lg">
+            {`<div class="bismillah-text-sm md:bismillah-text-base lg:bismillah-text-lg">
   Responsive text size
 </div>`}
           </CodeBlock>

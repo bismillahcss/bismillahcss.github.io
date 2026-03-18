@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "Blog - BismillahCSS",
+  description: "Stay up to date with the latest news, tutorials, and performance optimization tips for BismillahCSS.",
+}
 
 
 const posts = [

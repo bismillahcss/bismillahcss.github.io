@@ -1,8 +1,14 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, FileText, Package, Palette, Zap } from "lucide-react"
 import { GlowButton } from "@/components/glow-button"
 import { PageTransition } from "@/components/page-transition"
 import { AnimatedCard } from "@/components/animated-card"
+
+export const metadata: Metadata = {
+  title: "Documentation - BismillahCSS",
+  description: "Comprehensive guides and documentation to help you get started with BismillahCSS, the next-gen utility-first CSS framework.",
+}
 
 export default function DocsPage() {
   return (
