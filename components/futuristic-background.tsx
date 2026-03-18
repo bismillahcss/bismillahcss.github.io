@@ -44,7 +44,7 @@ export function FuturisticBackground({
         return (
           <div
             className={cn(
-              "absolute inset-0 z-0 bg-grid-pattern bg-[length:50px_50px]",
+              "absolute inset-0 z-0 bg-grid-pattern bg-[length:50px_50px] pointer-events-none",
               intensityClasses[intensity],
               className,
             )}
@@ -54,7 +54,7 @@ export function FuturisticBackground({
         return (
           <div
             className={cn(
-              "absolute inset-0 z-0 bg-dots-pattern bg-[length:20px_20px]",
+              "absolute inset-0 z-0 bg-dots-pattern bg-[length:20px_20px] pointer-events-none",
               intensityClasses[intensity],
               className,
             )}
@@ -64,7 +64,7 @@ export function FuturisticBackground({
         return (
           <motion.div
             className={cn(
-              "absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10",
+              "absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 pointer-events-none",
               className,
             )}
             initial={animated ? { backgroundPosition: "0% 0%" } : false}
@@ -98,7 +98,7 @@ export function FuturisticBackground({
       {/* Add a subtle gradient overlay */}
       <div
         className={cn(
-          "absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5",
+          "absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none",
           className,
         )}
       />

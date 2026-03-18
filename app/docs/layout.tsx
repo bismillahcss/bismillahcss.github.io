@@ -32,7 +32,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           </SheetTrigger>
           <SheetContent side="left" className="w-[80%] sm:w-[350px]">
             <div className="py-4">
-              <DocsSidebar />
+              <DocsSidebar onLinkClick={() => setSidebarOpen(false)} />
             </div>
           </SheetContent>
         </Sheet>

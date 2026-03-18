@@ -72,12 +72,12 @@ export function DocsSidebar({ className, onLinkClick }: { className?: string; on
   }
 
   return (
-    <nav className={cn("flex flex-col gap-2", className)}>
+    <nav className={cn("flex flex-col gap-2 relative z-20 pointer-events-auto", className)}>
       {sidebarItems.map((section) => (
         <div key={section.title} className="pb-4">
           <button
             onClick={() => toggleSection(section.title)}
-            className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium"
+            className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer transition-colors"
           >
             {section.title}
             <svg
@@ -102,10 +102,10 @@ export function DocsSidebar({ className, onLinkClick }: { className?: string; on
                 href={item.href}
                 onClick={onLinkClick}
                 className={cn(
-                  "flex items-center rounded-md px-2 py-1 text-sm",
+                  "flex items-center rounded-md px-2 py-1 text-sm relative z-30 cursor-pointer",
                   isActive(item.href)
                     ? "bg-accent text-accent-foreground font-medium"
-                    : "text-muted-foreground hover:text-foreground",
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
                 )}
               >
                 {item.title}

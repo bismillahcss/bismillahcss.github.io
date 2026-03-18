@@ -26,7 +26,7 @@ export default function DocsPage() {
               title: "Utility Classes",
               description: "Learn about the utility-first workflow and explore all available classes.",
               icon: Zap,
-              href: "/docs/utility-classes",
+              href: "/docs/utility-classes/layout",
             },
             {
               title: "Components",
@@ -38,7 +38,7 @@ export default function DocsPage() {
               title: "Customization",
               description: "Learn how to customize themes, extend the framework and create your own design system.",
               icon: Palette,
-              href: "/docs/customization",
+              href: "/docs/customization/theming",
             },
           ].map((item, index) => (
             <AnimatedCard key={item.title} index={index}>
