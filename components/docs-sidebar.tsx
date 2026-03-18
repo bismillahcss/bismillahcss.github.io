@@ -56,7 +56,7 @@ const sidebarItems = [
   },
 ]
 
-export function DocsSidebar({ className }: { className?: string }) {
+export function DocsSidebar({ className, onLinkClick }: { className?: string; onLinkClick?: () => void }) {
   const pathname = usePathname()
   const [openSections, setOpenSections] = useState<string[]>(
     // Default to all sections open on mobile, but can be toggled
@@ -100,6 +100,7 @@ export function DocsSidebar({ className }: { className?: string }) {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={onLinkClick}
                 className={cn(
                   "flex items-center rounded-md px-2 py-1 text-sm",
                   isActive(item.href)
