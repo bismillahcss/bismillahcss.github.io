@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BismillahCSS Components Showcase</title>
+  
+  <!-- Import BismillahCSS Components -->
+  <link rel="stylesheet" href="">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css">
+  
+  <style>
+    :root {
+      --bismillah-primary-color: #4361ee;
+      --bismillah-primary-dark: #3a56d4;
+      --bismillah-secondary-color: #6c757d;
+      --bismillah-success-color: #2ecc71;
+      --bismillah-danger-color: #e74c3c;
+      --bismillah-warning-color: #f39c12;
+      --bismillah-info-color: #3498db;
+      
+      --bismillah-gradient-start: #4361ee;
+      --bismillah-gradient-end: #7209b7;
+      
+      --bismillah-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      font-family: var(--bismillah-font-family);
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+    }
+    
+    .dark .section {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .section-title {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: var(--bismillah-primary-color);
+      border-bottom: 2px solid var(--bismillah-primary-color);
+      padding-bottom: 0.5rem;
+    }
+    
+    .dark .section-title {
+      color: #5e9eff;
+      border-bottom-color: #5e9eff;
+    }
+    
+    .component-demo {
+      margin-bottom: 2rem;
+    }
+    
+    .component-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    
+    .dark .component-title {
+      color: #aaa;
+    }
+    
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--bismillah-primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      border: none;
+      font-size: 1.25rem;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+    
+    /* Custom scrollbar for the page */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--bismillah-primary-color) #f1f1f1;
+    }
+    
+    html::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    html::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    html::-webkit-scrollbar-thumb {
+      background: var(--bismillah-primary-color);
+      border-radius: 5px;
+    }
+    
+    .dark html::-webkit-scrollbar-track {
+      background: #2a2a2a;
+    }
+    
+    /* Scrollbar demo containers */
+    .scrollbar-demo {
+      height: 150px;
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    
+    .dark .scrollbar-demo {
+      background-color: #2a2a2a;
+    }
+    
+    .scrollbar-content {
+      height: 400px;
+    }
+    
+    /* Code display */
+    .code-block {
+      background-color: #f5f5f5;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-family: monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      color: #333;
+    }
+    
+    .dark .code-block {
+      background-color: #2d2d2d;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bismillah-navbar">
+    <div class="bismillah-navbar-container">
+      <a href="#" class="bismillah-navbar-logo">
+        <img src="./docs/bismillah.gif" alt="Logo">
+        <span>BismillahCSS</span>
+      </a>
+      
+      <div class="bismillah-navbar-links">
+        <a href="#breadcrumbs" class="bismillah-navbar-link">Breadcrumbs</a>
+        <a href="#tables" class="bismillah-navbar-link">Tables</a>
+        <a href="#typography" class="bismillah-navbar-link">Typography</a>
+        <a href="#scrollbar" class="bismillah-navbar-link">Scrollbar</a>
+        <a href="#accordion" class="bismillah-navbar-link">Accordion</a>
+      </div>
+      
+      <div class="bismillah-navbar-right">
+        <a href="#" class="bismillah-navbar-cta">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="bismillah-h1">BismillahCSS Components Showcase</h1>
+    <p class="bismillah-p lead">Explore the beautiful components of the BismillahCSS framework.</p>
+    
+    <!-- Breadcrumbs Section -->
+    <section id="breadcrumbs" class="section">
+      <h2 class="section-title">Breadcrumbs</h2>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Default Breadcrumbs</h3>
+        <nav class="bismillah-breadcrumbs">
+          <div class="bismillah-breadcrumbs-container">
+            <div class="bismillah-breadcrumb-item">
+              <a href="#">Home</a>
+            </div>
+            <div class="bismillah-breadcrumb-divider">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="bismillah-breadcrumb-item">
+              <a href="#">Library</a>
+            </div>
+            <div class="bismillah-breadcrumb-divider">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="bismillah-breadcrumb-item active">Data</div>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Breadcrumbs with Background</h3>
+        <nav class="bismillah-breadcrumbs with-bg">
+          <div class="bismillah-breadcrumbs-container">
+            <div class="bismillah-breadcrumb-item">
+              <a href="#"><i class="fas fa-home bismillah-breadcrumb-icon"></i>Home</a>
+            </div>
+            <div class="bismillah-breadcrumb-divider">/</div>
+            <div class="bismillah-breadcrumb-item">
+              <a href="#"><i class="fas fa-book bismillah-breadcrumb-icon"></i>Library</a>
+            </div>
+            <div class="bismillah-breadcrumb-divider">/</div>
+            <div class="bismillah-breadcrumb-item active">
+              <i class="fas fa-database bismillah-breadcrumb-icon"></i>Data
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Pill Breadcrumbs</h3>
+          <nav class="bismillah-breadcrumbs pill">
+            <div class="bismillah-breadcrumbs-container">
+              <div class="bismillah-breadcrumb-item">
+                <a href="#">Home</a>
+              </div>
+              <div class="bismillah-breadcrumb-item">
+                <a href="#">Products</a>
+              </div>
+              <div class="bismillah-breadcrumb-item active">Laptops</div>
+            </div>
+          </nav>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Arrow Breadcrumbs</h3>
+          <nav class="bismillah-breadcrumbs arrow">
+            <div class="bismillah-breadcrumbs-container">
+              <div class="bismillah-breadcrumb-item">
+                <a href="#">Home</a>
+              </div>
+              <div class="bismillah-breadcrumb-item">
+                <a href="#">Products</a>
+              </div>
+              <div class="bismillah-breadcrumb-item active">Laptops</div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tables Section -->
+    <section id="tables" class="section">
+      <h2 class="section-title">Tables</h2>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Default Table</h3>
+        <div class="bismillah-table-container">
+          <table class="bismillah-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>Admin</td>
+                <td><span class="status-indicator status-active"></span> Active</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>Editor</td>
+                <td><span class="status-indicator status-active"></span> Active</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bob Johnson</td>
+                <td>bob@example.com</td>
+                <td>User</td>
+                <td><span class="status-indicator status-inactive"></span> Inactive</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Striped Table</h3>
+          <div class="bismillah-table-container">
+            <table class="bismillah-table striped">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Laptop</td>
+                  <td>$999</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>Smartphone</td>
+                  <td>$699</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Tablet</td>
+                  <td>$499</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>Monitor</td>
+                  <td>$299</td>
+                  <td>30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Bordered Table</h3>
+          <div class="bismillah-table-container">
+            <table class="bismillah-table bordered">
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Capital</th>
+                  <th>Population</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USA</td>
+                  <td>Washington DC</td>
+                  <td>331M</td>
+                </tr>
+                <tr>
+                  <td>UK</td>
+                  <td>London</td>
+                  <td>67M</td>
+                </tr>
+                <tr>
+                  <td>France</td>
+                  <td>Paris</td>
+                  <td>67M</td>
+                </tr>
+                <tr>
+                  <td>Japan</td>
+                  <td>Tokyo</td>
+                  <td>126M</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Table with Progress Bars</h3>
+        <div class="bismillah-table-container">
+          <table class="bismillah-table hoverable">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Assigned To</th>
+                <th>Progress</th>
+                <th>Deadline</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Website Redesign</td>
+                <td>John Doe</td>
+                <td>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 75%"></div>
+                  </div>
+                </td>
+                <td>Dec 15, 2023</td>
+                <td>
+                  <div class="row-actions">
+                    <button class="row-action-btn"><i class="fas fa-edit"></i></button>
+                    <button class="row-action-btn delete"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Mobile App Development</td>
+                <td>Jane Smith</td>
+                <td>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 45%"></div>
+                  </div>
+                </td>
+                <td>Jan 30, 2024</td>
+                <td>
+                  <div class="row-actions">
+                    <button class="row-action-btn"><i class="fas fa-edit"></i></button>
+                    <button class="row-action-btn delete"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Database Migration</td>
+                <td>Bob Johnson</td>
+                <td>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 90%"></div>
+                  </div>
+                </td>
+                <td>Nov 10, 2023</td>
+                <td>
+                  <div class="row-actions">
+                    <button class="row-action-btn"><i class="fas fa-edit"></i></button>
+                    <button class="row-action-btn delete"><i class="fas fa-trash"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Responsive Table</h3>
+        <div class="bismillah-table-container">
+          <table class="bismillah-table responsive">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Order ID">#12345</td>
+                <td data-label="Customer">John Doe</td>
+                <td data-label="Product">Laptop Pro</td>
+                <td data-label="Amount">$1,299</td>
+                <td data-label="Status"><span class="status-indicator status-active"></span> Shipped</td>
+              </tr>
+              <tr>
+                <td data-label="Order ID">#12346</td>
+                <td data-label="Customer">Jane Smith</td>
+                <td data-label="Product">Smartphone X</td>
+                <td data-label="Amount">$899</td>
+                <td data-label="Status"><span class="status-indicator status-active"></span> Delivered</td>
+              </tr>
+              <tr>
+                <td data-label="Order ID">#12347</td>
+                <td data-label="Customer">Bob Johnson</td>
+                <td data-label="Product">Wireless Earbuds</td>
+                <td data-label="Amount">$149</td>
+                <td data-label="Status"><span class="status-indicator status-error"></span> Cancelled</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Typography Section -->
+    <section id="typography" class="section">
+      <h2 class="section-title">Typography</h2>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Headings</h3>
+        <h1 class="bismillah-h1">Heading 1</h1>
+        <h2 class="bismillah-h2">Heading 2</h2>
+        <h3 class="bismillah-h3">Heading 3</h3>
+        <h4 class="bismillah-h4">Heading 4</h4>
+        <h5 class="bismillah-h5">Heading 5</h5>
+        <h6 class="bismillah-h6">Heading 6</h6>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Display Headings</h3>
+        <h1 class="bismillah-display-4">Display 4</h1>
+        <h1 class="bismillah-display-3">Display 3</h1>
+        <h1 class="bismillah-display-2">Display 2</h1>
+        <h1 class="bismillah-display-1">Display 1</h1>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Paragraphs</h3>
+        <p class="bismillah-p lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+        <p class="bismillah-p">This is a regular paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+        <p class="bismillah-p small">This is a smaller paragraph with less emphasis.</p>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Text Colors</h3>
+          <p class="bismillah-text-primary">Primary Text</p>
+          <p class="bismillah-text-secondary">Secondary Text</p>
+          <p class="bismillah-text-success">Success Text</p>
+          <p class="bismillah-text-danger">Danger Text</p>
+          <p class="bismillah-text-warning">Warning Text</p>
+          <p class="bismillah-text-info">Info Text</p>
+          <p class="bismillah-text-muted">Muted Text</p>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Text Styles</h3>
+          <p class="bismillah-font-bold">Bold Text</p>
+          <p class="bismillah-font-italic">Italic Text</p>
+          <p class="bismillah-text-uppercase">Uppercase Text</p>
+          <p class="bismillah-text-capitalize">capitalized text</p>
+          <p class="bismillah-text-underline">Underlined Text</p>
+          <p class="bismillah-text-line-through">Line Through Text</p>
+        </div>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Lists</h3>
+        <div class="demo-grid">
+          <div>
+            <h4 class="bismillah-h5">Unordered List</h4>
+            <ul class="bismillah-list">
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+              <li>List item four</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="bismillah-h5">Ordered List</h4>
+            <ol class="bismillah-list">
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+              <li>List item four</li>
+            </ol>
+          </div>
+          
+          <div>
+            <h4 class="bismillah-h5">Unstyled List</h4>
+            <ul class="bismillah-list-unstyled">
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+              <li>List item four</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="bismillah-h5">Inline List</h4>
+            <ul class="bismillah-list-inline">
+              <li class="bismillah-list-inline-item">List item one</li>
+              <li class="bismillah-list-inline-item">List item two</li>
+              <li class="bismillah-list-inline-item">List item three</li>
+              <li class="bismillah-list-inline-item">List item four</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Blockquote</h3>
+        <blockquote class="bismillah-blockquote">
+          <p>The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+          <footer class="bismillah-blockquote-footer">Nelson Mandela</footer>
+        </blockquote>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Code</h3>
+        <p>Inline code example: <code class="bismillah-code">const greeting = "Hello, world!";</code></p>
+        <pre class="bismillah-pre">
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('BismillahCSS'));
+        </pre>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Special Text Effects</h3>
+        <div class="demo-grid">
+          <div>
+            <h4 class="bismillah-h5">Gradient Text</h4>
+            <h2 class="bismillah-text-gradient">Gradient Heading</h2>
+          </div>
+          
+          <div>
+            <h4 class="bismillah-h5">Text with Shadow</h4>
+            <h2 class="bismillah-text-shadow">Shadow Text</h2>
+          </div>
+          
+          <div>
+            <h4 class="bismillah-h5">Animated Text</h4>
+            <h2 class="bismillah-text-animated">Hover over me</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Scrollbar Section -->
+    <section id="scrollbar" class="section">
+      <h2 class="section-title">Scrollbar</h2>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Default Scrollbar</h3>
+          <div class="scrollbar-demo bismillah-scrollbar">
+            <div class="scrollbar-content">
+              <p>Scroll down to see the custom scrollbar in action.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Thin Scrollbar</h3>
+          <div class="scrollbar-demo bismillah-scrollbar-thin">
+            <div class="scrollbar-content">
+              <p>Scroll down to see the thin scrollbar in action.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Colored Scrollbar</h3>
+          <div class="scrollbar-demo bismillah-scrollbar-primary">
+            <div class="scrollbar-content">
+              <p>Scroll down to see the colored scrollbar in action.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Gradient Scrollbar</h3>
+          <div class="scrollbar-demo bismillah-scrollbar-gradient">
+            <div class="scrollbar-content">
+              <p>Scroll down to see the gradient scrollbar in action.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Scrollbar with Track</h3>
+          <div class="scrollbar-demo bismillah-scrollbar-with-track">
+            <div class="scrollbar-content">
+              <p>Scroll down to see the scrollbar with visible track.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Hidden Scrollbar</h3>
+          <div class="scrollbar-demo bismillah-scrollbar-hidden">
+            <div class="scrollbar-content">
+              <p>Scroll down to see the hidden scrollbar in action (functionality remains).</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+              <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Accordion Section -->
+    <section id="accordion" class="section">
+      <h2 class="section-title">Accordion</h2>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Default Accordion</h3>
+        <div class="bismillah-accordion">
+          <div class="bismillah-accordion-item">
+            <h2 class="bismillah-accordion-header">
+              <button class="bismillah-accordion-button" type="button" aria-expanded="true">
+                Accordion Item #1
+              </button>
+            </h2>
+            <div class="bismillah-accordion-collapse">
+              <div class="bismillah-accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+              </div>
+            </div>
+          </div>
+          <div class="bismillah-accordion-item">
+            <h2 class="bismillah-accordion-header">
+              <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div class="bismillah-accordion-collapse">
+              <div class="bismillah-accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+              </div>
+            </div>
+          </div>
+          <div class="bismillah-accordion-item">
+            <h2 class="bismillah-accordion-header">
+              <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div class="bismillah-accordion-collapse">
+              <div class="bismillah-accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Flush Accordion</h3>
+          <div class="bismillah-accordion flush">
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button" type="button" aria-expanded="true">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  This is the first item's accordion body. It is shown by default.
+                </div>
+              </div>
+            </div>
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  This is the second item's accordion body. It is hidden by default.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Bordered Accordion</h3>
+          <div class="bismillah-accordion bordered">
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button" type="button" aria-expanded="true">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  This is the first item's accordion body. It is shown by default.
+                </div>
+              </div>
+            </div>
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  This is the second item's accordion body. It is hidden by default.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="demo-grid">
+        <div class="component-demo">
+          <h3 class="component-title">Accordion with Icons</h3>
+          <div class="bismillah-accordion">
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button" type="button" aria-expanded="true">
+                  <i class="fas fa-user bismillah-accordion-icon"></i>
+                  User Profile
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  User profile settings and information.
+                </div>
+              </div>
+            </div>
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                  <i class="fas fa-cog bismillah-accordion-icon"></i>
+                  Settings
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  Application settings and preferences.
+                </div>
+              </div>
+            </div>
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                  <i class="fas fa-bell bismillah-accordion-icon"></i>
+                  Notifications
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  Notification settings and history.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-demo">
+          <h3 class="component-title">Plus/Minus Accordion</h3>
+          <div class="bismillah-accordion plus-minus">
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button" type="button" aria-expanded="true">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  This is the first item's accordion body. It is shown by default.
+                </div>
+              </div>
+            </div>
+            <div class="bismillah-accordion-item">
+              <h2 class="bismillah-accordion-header">
+                <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div class="bismillah-accordion-collapse">
+                <div class="bismillah-accordion-body">
+                  This is the second item's accordion body. It is hidden by default.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="component-demo">
+        <h3 class="component-title">Colored Accordion</h3>
+        <div class="bismillah-accordion primary">
+          <div class="bismillah-accordion-item">
+            <h2 class="bismillah-accordion-header">
+              <button class="bismillah-accordion-button" type="button" aria-expanded="true">
+                Accordion Item #1
+              </button>
+            </h2>
+            <div class="bismillah-accordion-collapse">
+              <div class="bismillah-accordion-body">
+                This is the first item's accordion body. It is shown by default.
+              </div>
+            </div>
+          </div>
+          <div class="bismillah-accordion-item">
+            <h2 class="bismillah-accordion-header">
+              <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div class="bismillah-accordion-collapse">
+              <div class="bismillah-accordion-body">
+                This is the second item's accordion body. It is hidden by default.
+              </div>
+            </div>
+          </div>
+          <div class="bismillah-accordion-item">
+            <h2 class="bismillah-accordion-header">
+              <button class="bismillah-accordion-button collapsed" type="button" aria-expanded="false">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div class="bismillah-accordion-collapse">
+              <div class="bismillah-accordion-body">
+                This is the third item's accordion body. It is hidden by default.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Badges & Toasts Section -->
+    <section id="badges-toasts" class="section">
+      <h2 class="section-title">Badges & Toasts</h2>
+
+      <div class="component-demo">
+        <h3 class="component-title">Badges</h3>
+        <div class="demo-grid">
+          <span class="bismillah-badge bismillah-badge-primary">Primary</span>
+          <span class="bismillah-badge bismillah-badge-secondary">Secondary</span>
+          <span class="bismillah-badge bismillah-badge-success">Success</span>
+          <span class="bismillah-badge bismillah-badge-warning">Warning</span>
+          <span class="bismillah-badge bismillah-badge-danger">Danger</span>
+          <span class="bismillah-badge bismillah-badge-info">Info</span>
+          <span class="bismillah-badge bismillah-badge-light">Light</span>
+          <span class="bismillah-badge bismillah-badge-dark">Dark</span>
+          <span class="bismillah-badge bismillah-badge-outline bismillah-text-primary">Outline</span>
+        </div>
+      </div>
+
+      <div class="component-demo">
+        <h3 class="component-title">Toasts</h3>
+        <div class="demo-grid">
+          <div class="bismillah-toast bismillah-toast-success">
+            <span>🎉 Success: Action completed.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+          <div class="bismillah-toast bismillah-toast-warning">
+            <span>⚠️ Warning: Check your values.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+          <div class="bismillah-toast bismillah-toast-danger">
+            <span>❌ Error: Something went wrong.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+          <div class="bismillah-toast bismillah-toast-info">
+            <span>ℹ️ Info: Update available.</span>
+            <button class="bismillah-toast-close" aria-label="Close toast">×</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+  
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('i');
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      
+      if (body.classList.contains('dark')) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    });
+    
+    // Accordion Functionality
+    document.querySelectorAll('.bismillah-accordion-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle the current button
+        button.classList.toggle('collapsed', isExpanded);
+        button.setAttribute('aria-expanded', !isExpanded);
+        
+        // Find the collapse element
+        const collapseContent = button.parentElement.nextElementSibling || 
+                               button.parentElement.parentElement.querySelector('.bismillah-accordion-collapse');
+        
+        if (collapseContent) {
+          if (isExpanded) {
+            collapseContent.style.height = '0';
+            setTimeout(() => {
+              collapseContent.style.display = 'none';
+            }, 350);
+          } else {
+            collapseContent.style.display = 'block';
+            const height = collapseContent.scrollHeight;
+            collapseContent.style.height = '0';
+            setTimeout(() => {
+              collapseContent.style.height = height + 'px';
+              setTimeout(() => {
+                collapseContent.style.height = 'auto';
+              }, 350);
+            }, 10);
+          }
+        }
+      });
+    });
+    
+    // Initialize accordions
+    document.querySelectorAll('.bismillah-accordion-button').forEach(button => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      const collapseContent = button.parentElement.nextElementSibling || 
+                             button.parentElement.parentElement.querySelector('.bismillah-accordion-collapse');
+      
+      if (collapseContent) {
+        if (!isExpanded) {
+          collapseContent.style.display = 'none';
+          collapseContent.style.height = '0';
+        } else {
+          collapseContent.style.height = 'auto';
+        }
+      }
+    });
+
+    // Toast close actions
+    document.querySelectorAll('.bismillah-toast-close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const toast = btn.closest('.bismillah-toast');
+        if (toast) {
+          toast.style.opacity = '0';
+          toast.style.transition = 'opacity 0.25s ease-out, transform 0.25s ease-out';
+          toast.style.transform = 'translateY(-8px)';
+          setTimeout(() => toast.remove(), 250);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

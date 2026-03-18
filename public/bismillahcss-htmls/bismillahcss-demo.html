@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BismillahCSS Full Demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css" />
+  <style>
+    body { background: #f3f4f6; padding: 24px; font-family: system-ui, sans-serif; }
+    .demo-section { margin-bottom: 2rem; background: white; padding: 1rem 1.25rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(15, 23, 42, .08); }
+    .demo-title { margin-top: 0; color: #0f172a; font-size: 1.2rem; border-bottom: 2px solid #be185d; padding-bottom: 0.25rem; }
+    .demo-row { display: grid; gap: 0.75rem; }
+    .demo-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; }
+    .small { font-size: 0.9rem; color: #475569; }
+  </style>
+</head>
+<body>
+  <h1>BismillahCSS Full Demo</h1>
+  <p class="small">Use this page to visually inspect the major utilities & components.</p>
+
+  <section class="demo-section" id="table-of-contents">
+    <h2 class="demo-title">Table of Contents</h2>
+    <ul>
+      <li><a href="#utilities-spacing">Spacing</a></li>
+      <li><a href="#utilities-display">Display & Flex</a></li>
+      <li><a href="#utilities-typography">Typography</a></li>
+      <li><a href="#utilities-border-shadow">Border & Shadow</a></li>
+      <li><a href="#utilities-extra">Unique Utilities</a></li>
+      <li><a href="#components-buttons">Buttons</a></li>
+      <li><a href="#components-cards">Cards</a></li>
+      <li><a href="#components-alerts">Alerts</a></li>
+      <li><a href="#components-badges-toast">Badges & Toasts</a></li>
+      <li><a href="#components-accordion">Accordion</a></li>
+      <li><a href="#helper-visibility">Helpers</a></li>
+    </ul>
+  </section>
+
+  <section class="demo-section" id="utilities-spacing">
+    <h2 class="demo-title">Spacing</h2>
+    <div class="demo-row">
+      <div class="demo-card bismillah-m-3 bismillah-p-3 bismillah-border bismillah-rounded">bismillah-m-3 + bismillah-p-3</div>
+      <div class="demo-card bismillah-m-4 bismillah-p-4 bismillah-border bismillah-rounded">bismillah-m-4 + bismillah-p-4</div>
+    </div>
+  </section>
+
+  <section class="demo-section" id="utilities-display">
+    <h2 class="demo-title">Display & Flex</h2>
+    <div class="bismillah-flex bismillah-justify-between bismillah-items-center bismillah-p-3 bismillah-border bismillah-rounded">
+      <span>Flex child 1</span><span>Flex child 2</span><span>Flex child 3</span>
+    </div>
+    <div class="demo-row bismillah-mt-3">
+      <div class="bismillah-block bismillah-bg-primary bismillah-text-light bismillah-p-2">bismillah-block</div>
+      <div class="bismillah-inline-block bismillah-bg-secondary bismillah-text-light bismillah-p-2">bismillah-inline-block</div>
+      <div class="bismillah-hidden">This is hidden</div>
+    </div>
+  </section>
+
+  <section class="demo-section" id="utilities-typography">
+    <h2 class="demo-title">Typography</h2>
+    <p class="bismillah-text-xs">bismillah-text-xs</p>
+    <p class="bismillah-text-sm">bismillah-text-sm</p>
+    <p class="bismillah-text-base">bismillah-text-base</p>
+    <p class="bismillah-text-lg">bismillah-text-lg</p>
+    <p class="bismillah-text-xl">bismillah-text-xl</p>
+    <p class="bismillah-text-2xl">bismillah-text-2xl</p>
+    <p class="bismillah-text-3xl">bismillah-text-3xl</p>
+    <p class="bismillah-text-uppercase">bismillah-text-uppercase</p>
+    <p class="bismillah-text-capitalize">bismillah-text-capitalize</p>
+    <p class="bismillah-text-lowercase">bismillah-text-lowercase</p>
+    <p class="bismillah-text-underline">bismillah-text-underline</p>
+    <p class="bismillah-text-line-through">bismillah-text-line-through</p>
+    <p class="bismillah-text-gradient bismillah-text-3xl">bismillah-text-gradient</p>
+    <p class="bismillah-font-bold">bismillah-font-bold</p>
+    <p class="bismillah-font-light">bismillah-font-light</p>
+  </section>
+
+  <section class="demo-section" id="utilities-border-shadow">
+    <h2 class="demo-title">Border & Shadow</h2>
+    <div class="bismillah-border bismillah-rounded bismillah-p-4">bismillah-border + bismillah-rounded</div>
+    <div class="bismillah-border-primary bismillah-border bismillah-rounded-lg bismillah-p-3 bismillah-mt-2">bismillah-border-primary</div>
+    <div class="bismillah-shadow bismillah-rounded bismillah-p-4 bismillah-mt-2">bismillah-shadow</div>
+    <div class="bismillah-shadow-xl bismillah-rounded bismillah-p-4 bismillah-mt-2">bismillah-shadow-xl</div>
+  </section>
+
+  <section class="demo-section" id="utilities-extra">
+    <h2 class="demo-title">Unique utilities</h2>
+    <div class="bismillah-glass bismillah-p-4 bismillah-mb-3">bismillah-glass</div>
+    <div class="bismillah-neumorphism bismillah-p-4 bismillah-mb-3">bismillah-neumorphism</div>
+    <div class="bismillah-frosted bismillah-p-4 bismillah-mb-3">bismillah-frosted</div>
+    <div class="bismillah-gradient-border bismillah-p-4">bismillah-gradient-border</div>
+  </section>
+
+  <section class="demo-section" id="components-buttons">
+    <h2 class="demo-title">Buttons</h2>
+    <button class="bismillah-btn bismillah-btn-primary bismillah-mr-2">Primary</button>
+    <button class="bismillah-btn bismillah-btn-secondary bismillah-mr-2">Secondary</button>
+    <button class="bismillah-btn bismillah-btn-success">Success</button>
+  </section>
+
+  <section class="demo-section" id="components-cards">
+    <h2 class="demo-title">Card</h2>
+    <div class="bismillah-card">
+      <h3 class="bismillah-text-xl">Card heading</h3>
+      <p>Card body text with <span class="bismillah-text-info">info text</span>.</p>
+    </div>
+  </section>
+
+  <section class="demo-section" id="components-alerts">
+    <h2 class="demo-title">Alerts</h2>
+    <div class="bismillah-alert bismillah-alert-success">Success alert</div>
+    <div class="bismillah-alert bismillah-alert-warning">Warning alert</div>
+    <div class="bismillah-alert bismillah-alert-danger">Danger alert</div>
+  </section>
+
+  <section class="demo-section" id="components-badges-toast">
+    <h2 class="demo-title">Badges & Toasts</h2>
+    <span class="bismillah-badge bismillah-badge-primary">Primary</span>
+    <span class="bismillah-badge bismillah-badge-success">Success</span>
+    <span class="bismillah-badge bismillah-badge-outline bismillah-text-primary">Outline</span>
+
+    <div class="bismillah-toast bismillah-toast-info bismillah-mt-3" style="display:inline-flex;align-items:center;">
+      <span>Info toast</span>
+      <button class="bismillah-toast-close" style="background:transparent;border:none;font-weight:bold;margin-left:8px;">×</button>
+    </div>
+  </section>
+
+  <section class="demo-section" id="components-accordion">
+    <h2 class="demo-title">Accordion (style only)</h2>
+    <div class="bismillah-accordion">
+      <div class="bismillah-accordion-item">
+        <h3 class="bismillah-accordion-header">Item One</h3>
+        <div class="bismillah-accordion-body">This is section one.</div>
+      </div>
+      <div class="bismillah-accordion-item">
+        <h3 class="bismillah-accordion-header">Item Two</h3>
+        <div class="bismillah-accordion-body">This is section two.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section" id="helper-visibility">
+    <h2 class="demo-title">Helpers</h2>
+    <div class="bismillah-aspect-16-9" style="background:#dbeafe;">
+      <div class="bismillah-flex bismillah-items-center bismillah-justify-center">16:9 aspect box</div>
+    </div>
+    <p class="bismillah-line-clamp-2" style="width:240px; margin-top:12px;">Long multiline text content which should be clamped to two lines and hide overflow after that. This helps with card previews where you want consistent text height.</p>
+  </section>
+
+  <section class="demo-section" id="all-classes">
+    <h2 class="demo-title">Complete Class List</h2>
+    <p>All currently implemented utility and component classes in this repository.</p>
+    <pre><code>.bismillah-m-0 .bismillah-m-1 .bismillah-m-2 .bismillah-m-3 .bismillah-m-4 .bismillah-m-5
+.bismillah-p-0 .bismillah-p-1 .bismillah-p-2 .bismillah-p-3 .bismillah-p-4 .bismillah-p-5
+.bismillah-text-xs .bismillah-text-sm .bismillah-text-base .bismillah-text-lg .bismillah-text-xl .bismillah-text-2xl .bismillah-text-3xl
+.bismillah-font-light .bismillah-font-normal .bismillah-font-medium .bismillah-font-bold
+.bismillah-text-primary .bismillah-text-secondary .bismillah-text-success .bismillah-text-warning .bismillah-text-danger .bismillah-text-info
+.bismillah-bg-primary .bismillah-bg-secondary .bismillah-bg-success .bismillah-bg-warning .bismillah-bg-danger .bismillah-bg-info
+.bismillah-border .bismillah-border-0 .bismillah-border-2 .bismillah-border-4 .bismillah-border-8
+.bismillah-border-primary .bismillah-border-secondary .bismillah-border-success .bismillah-border-warning .bismillah-border-danger
+.bismillah-rounded-none .bismillah-rounded-sm .bismillah-rounded .bismillah-rounded-lg .bismillah-rounded-full
+.bismillah-shadow-sm .bismillah-shadow .bismillah-shadow-md .bismillah-shadow-lg .bismillah-shadow-xl .bismillah-shadow-none
+.bismillah-flex .bismillah-grid .bismillah-text-center .bismillah-bg-dark .bismillah-container
+.bismillah-btn .bismillah-btn-primary .bismillah-btn-secondary
+.bismillah-card .bismillah-alert .bismillah-alert-success .bismillah-alert-warning .bismillah-alert-danger
+.bismillah-badge .bismillah-badge-primary .bismillah-badge-secondary .bismillah-badge-success .bismillah-badge-warning .bismillah-badge-danger .bismillah-badge-info .bismillah-badge-light .bismillah-badge-dark .bismillah-badge-outline
+.bismillah-toast .bismillah-toast-success .bismillah-toast-warning .bismillah-toast-danger .bismillah-toast-info .bismillah-toast-close
+.bismillah-glass .bismillah-neumorphism .bismillah-frosted .bismillah-gradient-border
+.bismillah-line-clamp-2 .bismillah-line-clamp-3 .bismillah-aspect-16-9 .bismillah-text-gradient .bismillah-animation-pulse-quick
+</code></pre>
+  </section>
+
+  <script>
+    document.body.addEventListener('click', (event) => {
+      if (event.target.matches('.bismillah-toast-close')) {
+        const toast = event.target.closest('.bismillah-toast');
+        if (toast) toast.remove();
+      }
+    });
+  </script>
+</body>
+</html>
