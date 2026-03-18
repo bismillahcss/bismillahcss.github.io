@@ -14,9 +14,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BismillahCSS - The Next-Gen CSS Framework",
-  description: "BismillahCSS is a fast, lightweight, utility-first CSS framework for modern web development. Build beautiful interfaces with ease.",
-  keywords: "CSS framework, utility-first CSS, modern web development, lightweight CSS, bismillahcss frontend, tailwindcss-alternative, css-framework, utility-classes, future-css, lightweight-css, advanced-css, utility-first, responsive-css, bismillahcss framework, bismillahcss utility-first, bismillahcss lightweight, code-with-bismillah, bismillahcss components, bismillahcss utilities, bismillahcss responsive, bismillahcss customization, bismillahcss theming, bismillahcss design system, bismillahcss typography, bismillahcss grid, bismillahcss flexbox, bismillahcss animations, bismillahcss transitions",
-  authors: [{ name: "Mubashir Ali" }],
+  description: "BismillahCSS is a fast, lightweight, utility-first CSS framework for modern web development. Developed by Mubashir Ali (Bioinformatician) as part of the Code with Bismillah initiative.",
+  keywords: "CSS framework, utility-first CSS, modern web development, lightweight CSS, bismillahcss frontend, tailwindcss-alternative, css-framework, utility-classes, future-css, lightweight-css, advanced-css, utility-first, responsive-css, bismillahcss framework, bismillahcss utility-first, bismillahcss lightweight, code-with-bismillah, bismillahcss components, bismillahcss utilities, bismillahcss responsive, bismillahcss customization, bismillahcss theming, bismillahcss design system, bismillahcss typography, bismillahcss grid, bismillahcss flexbox, bismillahcss animations, bismillahcss transitions, Mubashir Ali, Mubashir Ali Bioinformatician, Code with Bismillah, bioinformatics CSS, computational biology framework",
+  authors: [{ name: "Mubashir Ali", url: "https://codewithbismillah.online" }],
   verification: {
     google: "GhJ96yf5IMVcGgy8dgYiIHlTQJxeE6UnaTe4xusCl1k",
   },
@@ -79,7 +79,16 @@ export default function RootLayout({
               "url": "https://bismillahcss.github.io/",
               "author": {
                 "@type": "Person",
-                "name": "Mubashir Ali"
+                "name": "Mubashir Ali",
+                "jobTitle": "Bioinformatician & Data Science Professional",
+                "url": "https://codewithbismillah.online",
+                "description": "Mubashir Ali is a bioinformatician and researcher specializing in computational biology and machine learning. He is the founder of Code with Bismillah.",
+                "sameAs": [
+                  "https://github.com/bismillahcss",
+                  "https://twitter.com/bismillahcss",
+                  "https://codewithbismillah.online",
+                  "https://www.researchgate.net/profile/Mubashir-Ali"
+                ]
               },
               "offers": {
                 "@type": "Offer",
@@ -95,12 +104,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "BismillahCSS",
-              "url": "https://bismillahcss.github.io/",
+              "name": "Code with Bismillah",
+              "url": "https://codewithbismillah.online",
               "logo": "https://bismillahcss.github.io/images/bismillah-logo.png",
+              "founder": {
+                "@type": "Person",
+                "name": "Mubashir Ali"
+              },
               "sameAs": [
                 "https://github.com/bismillahcss",
-                "https://twitter.com/bismillahcss"
+                "https://twitter.com/bismillahcss",
+                "https://codewithbismillah.online"
               ]
             })
           }}
