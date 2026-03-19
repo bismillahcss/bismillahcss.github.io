@@ -245,9 +245,8 @@
 .bismillah-showcase {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-color, transparent);
-  color: var(--text-color, inherit);
+  font-family: inherit;
+  color: inherit;
 }
 
 /* Utility Classes */

@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const sidebarItems = [
@@ -104,9 +105,11 @@ export function DocsSidebar({ className, onLinkClick }: { className?: string; on
         <div key={section.title} className="pb-4">
           <button
             onClick={() => toggleSection(section.title)}
-            className="flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium hover:bg-accent hover:text-accent-foreground cursor-pointer transition-colors"
+            className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold hover:bg-primary/10 hover:text-primary transition-all group cursor-pointer"
           >
-            {section.title}
+            <span className="tracking-tight uppercase text-xs text-muted-foreground group-hover:text-primary transition-colors">
+              {section.title}
+            </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -117,25 +120,35 @@ export function DocsSidebar({ className, onLinkClick }: { className?: string; on
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className={cn("h-4 w-4 transition-transform", openSections.includes(section.title) ? "rotate-180" : "")}
+              className={cn("h-4 w-4 text-muted-foreground/50 transition-all", openSections.includes(section.title) ? "rotate-0 opacity-100" : "-rotate-90 opacity-40")}
             >
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
-          <div className={cn("mt-1 pl-2 space-y-1", !openSections.includes(section.title) && "hidden")}>
+          <div className={cn("mt-1 pl-1 space-y-1 overflow-hidden transition-all duration-300",
+            openSections.includes(section.title) ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0")}>
             {section.items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={onLinkClick}
                 className={cn(
-                  "flex items-center rounded-md px-2 py-1 text-sm relative z-30 cursor-pointer",
+                  "flex items-center rounded-lg px-4 py-1.5 text-sm transition-all duration-200 relative group overflow-hidden",
                   isActive(item.href)
-                    ? "bg-accent text-accent-foreground font-medium"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+                    ? "bg-primary/20 text-primary font-bold shadow-[0_0_15px_-3px_rgba(var(--primary),0.3)]"
+                    : "text-muted-foreground/80 hover:text-foreground hover:bg-accent/40",
                 )}
               >
+                {isActive(item.href) && (
+                  <motion.div
+                    layoutId="active-dot"
+                    className="absolute left-1.5 w-1 h-1 rounded-full bg-primary"
+                  />
+                )}
                 {item.title}
+                {!isActive(item.href) && (
+                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-primary scale-y-0 group-hover:scale-y-100 transition-transform duration-200 origin-center" />
+                )}
               </Link>
             ))}
           </div>
@@ -144,4 +157,5 @@ export function DocsSidebar({ className, onLinkClick }: { className?: string; on
     </nav>
   )
 }
+
 

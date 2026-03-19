@@ -40,7 +40,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
 
       <div className="flex flex-col md:flex-row md:gap-10">
         <DocsSidebar className="hidden md:block shrink-0 md:w-64 xl:w-72" />
-        <main className="flex-1 py-6 bismillah-showcase">{children}</main>
+        <main className="flex-1 py-6">{children}</main>
       </div>
     </div>
   )

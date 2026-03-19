@@ -76,19 +76,7 @@
   }
 }
 
-/* Scoped BismillahCSS environment */
-.bismillah-showcase {
-  --bismillah-primary: hsl(var(--primary));
-  --bismillah-secondary: hsl(var(--secondary));
-  --bismillah-accent: hsla(var(--accent) / 0.1);
-  --bg-color: transparent;
-  --text-color: inherit;
-  transition: all 0.3s ease;
-}
-
-.dark .bismillah-showcase {
-  --bismillah-accent: hsla(var(--accent) / 0.2);
-}
+/* Website Design System (Tailwind-First) */
 
 /* Premium Animations */
 @keyframes mesh-gradient {

@@ -130,9 +130,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="GhJ96yf5IMVcGgy8dgYiIHlTQJxeE6UnaTe4xusCl1k" />
-        {/* Framework Stylesheets (Scoped to .bismillah-showcase) */}
-        <link rel="stylesheet" href="/bismillah.css" />
-        <link rel="stylesheet" href="/attractive.css" />
+        {/* BismillahCSS is loaded only for specific component previews to avoid global conflicts */}
 
         {/* Structured Data for SoftwareSourceCode */}
         <script

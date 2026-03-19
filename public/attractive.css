@@ -13,11 +13,10 @@
 }
 
 .bismillah-showcase {
-    background-color: var(--bismillah-bg-color, transparent);
-    color: var(--bismillah-text-color, inherit);
-    font-family: var(--bismillah-font-family, sans-serif);
     margin: 0;
     padding: 0;
+    font-family: inherit;
+    color: inherit;
 }
 
 /* Typography */
