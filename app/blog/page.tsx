@@ -11,6 +11,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: "BismillahCSS: Redefining How We Think About Styling",
+    description: "Explore how BismillahCSS shifts the paradigm from technical implementation to human-centered intent, prioritizing clarity and meaning.",
+    date: "March 19, 2024",
+    author: "Mubashir Ali",
+    authorImage: "images/mubashir.png",
+    category: "Philosophy",
+    slug: "redefining-styling-intent-driven-css",
+    image: "/images/blog/redefining-styling.png",
+  },
+  {
     title: "Introducing BismillahCSS v1.0",
     description:
       "Today we're excited to announce the official release of BismillahCSS v1.0, the next-gen CSS framework for modern web development.",

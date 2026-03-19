@@ -193,6 +193,10 @@ export default function RootLayout({
                 "sameAs": [
                   "https://github.com/bismillahcss",
                   "https://twitter.com/bismillahcss",
+                  "https://facebook.com/bismillahcss",
+                  "https://instagram.com/bismillahcss",
+                  "https://linkedin.com/company/bismillahcss",
+                  "https://youtube.com/@bismillahcss",
                   "https://codewithbismillah.online",
                   "https://www.researchgate.net/profile/Mubashir-Ali"
                 ]
@@ -237,6 +241,10 @@ export default function RootLayout({
               "sameAs": [
                 "https://github.com/bismillahcss",
                 "https://twitter.com/bismillahcss",
+                "https://facebook.com/bismillahcss",
+                "https://instagram.com/bismillahcss",
+                "https://linkedin.com/company/bismillahcss",
+                "https://youtube.com/@bismillahcss",
                 "https://codewithbismillah.online"
               ]
             })

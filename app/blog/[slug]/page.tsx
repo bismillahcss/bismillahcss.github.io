@@ -6,6 +6,49 @@ import { notFound } from "next/navigation"
 
 const posts = [
     {
+        title: "BismillahCSS: Redefining How We Think About Styling",
+        description: "Explore how BismillahCSS shifts the paradigm from technical implementation to human-centered intent, prioritizing clarity and meaning.",
+        content: `
+      <p>In today’s rapidly evolving frontend ecosystem, developers are no longer just writing code—they are shaping experiences. Frameworks like Tailwind CSS and shadcn/ui have already transformed how interfaces are built. Tailwind introduced a utility-first mindset, while shadcn/ui streamlined development through reusable components. Both approaches are powerful, yet they still operate within a familiar paradigm: styling as a technical task.</p>
+      <p>BismillahCSS challenges that assumption entirely.</p>
+      <h2>A Shift from Implementation to Intent</h2>
+      <p>At its core, BismillahCSS is built on a radically different philosophy: <strong>intent over implementation</strong>.</p>
+      <p>Instead of thinking in terms of margins, paddings, or flexbox utilities, developers express what they mean. Rather than writing long chains of classes, they use purpose-driven names like:</p>
+      <ul>
+        <li><code>card-primary</code></li>
+        <li><code>layout-focus</code></li>
+        <li><code>text-peace</code></li>
+      </ul>
+      <p>This shift reduces cognitive overload and aligns code with human thinking. You are no longer assembling styles—you are communicating ideas.</p>
+      <h2>Semantic and Expressive by Design</h2>
+      <p>Where traditional frameworks prioritize technical accuracy, BismillahCSS prioritizes clarity and meaning. Class names are readable, memorable, and emotionally expressive.</p>
+      <p>This makes it especially powerful for beginners learning UI development, teams collaborating on large projects, and developers who value clean, self-documenting code. With BismillahCSS, the codebase becomes easier to read—not just for machines, but for humans.</p>
+      <h2>Opinionated Design Systems, Not Just Tools</h2>
+      <p>Unlike utility-first frameworks that give you complete freedom, BismillahCSS introduces opinionated design systems. It comes with predefined spacing scales, harmonized typography, and thoughtfully curated color palettes.</p>
+      <p>This reduces decision fatigue and enforces visual consistency—similar to how companies like Apple Inc. approach design: guided, intentional, and disciplined.</p>
+      <h2>Smart Presets for Rapid Development</h2>
+      <p>One of the most powerful features of BismillahCSS is its smart presets. With minimal configuration, developers can instantly apply complete UI systems tailored for startup dashboards, student portfolios, or bioinformatics platforms.</p>
+      <h2>Built-In Accessibility and Behavior</h2>
+      <p>Accessibility in many frameworks is often optional. In BismillahCSS, it is default. The framework automatically handles color contrast, focus states, and readability. But it goes even further by embedding behavior into styling. For example, a single button class may include hover effects, loading states, and subtle animations.</p>
+      <h2>A Human-Centered Design Philosophy</h2>
+      <p>Perhaps the most unique aspect of BismillahCSS is its philosophical approach to design. It is not just about building interfaces—it is about building meaningful experiences. The framework encourages calm and focused layouts, intentional use of space, and emotionally aware design choices.</p>
+      <h2>Developer Experience That Feels Natural</h2>
+      <p>BismillahCSS also prioritizes developer experience with intuitive CLI commands, prebuilt layouts, and minimal setup. Developers can spend less time configuring and more time creating.</p>
+      <h2>Getting Started</h2>
+      <p>You can quickly integrate BismillahCSS into your project using CDN:</p>
+      <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/bismillahcss/dist/bismillah.min.css" rel="stylesheet"&gt;</code></pre>
+      <p>Or install it via npm:</p>
+      <pre><code>npm install bismillahcss</code></pre>
+    `,
+        date: "March 19, 2024",
+        author: "Mubashir Ali",
+        authorImage: "images/mubashir.png",
+        category: "Philosophy",
+        slug: "redefining-styling-intent-driven-css",
+        image: "/images/blog/redefining-styling.png",
+        readTime: "7 min read",
+    },
+    {
         title: "Introducing BismillahCSS v1.0",
         description:
             "Today we're excited to announce the official release of BismillahCSS v1.0, the next-gen CSS framework for modern web development.",
@@ -106,6 +149,38 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
     return (
         <div className="container py-10 max-w-4xl mx-auto">
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": post.title,
+                            "description": post.description,
+                            "image": `https://bismillahcss.github.io${post.image}`,
+                            "author": {
+                                "@type": "Person",
+                                "name": post.author,
+                                "url": "https://bismillahcss.github.io"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "BismillahCSS",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://bismillahcss.github.io/images/bismillah-logo.png"
+                                }
+                            },
+                            "datePublished": post.date,
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": `https://bismillahcss.github.io/blog/${post.slug}`
+                            }
+                        })
+                    }}
+                />
+            </head>
             <Link href="/blog" className="inline-flex items-center text-sm font-medium text-primary hover:underline mb-8">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Blog
