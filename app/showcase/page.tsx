@@ -20,7 +20,7 @@ export default function ShowcasePage() {
 
     return (
         <PageTransition>
-            <div className="container mx-auto py-12 px-4 mt-20">
+            <div className="container mx-auto py-12 px-4 mt-20 bismillah-showcase">
                 <header className="max-w-3xl mb-16">
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
                         Visual <span className="text-primary">Showcase</span>

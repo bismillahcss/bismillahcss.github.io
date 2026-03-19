@@ -12,10 +12,10 @@
     --bismillah-transition: all 0.3s ease;
 }
 
-body {
-    background-color: var(--bismillah-bg-color);
-    color: var(--bismillah-text-color);
-    font-family: var(--bismillah-font-family);
+.bismillah-showcase {
+    background-color: var(--bismillah-bg-color, transparent);
+    color: var(--bismillah-text-color, inherit);
+    font-family: var(--bismillah-font-family, sans-serif);
     margin: 0;
     padding: 0;
 }
