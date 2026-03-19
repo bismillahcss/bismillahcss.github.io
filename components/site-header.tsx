@@ -14,6 +14,7 @@ export function SiteHeader() {
   const navigation = [
     { name: "Docs", href: "/docs" },
     { name: "Components", href: "/components" },
+    { name: "Showcase", href: "/showcase" },
     { name: "Playground", href: "/playground" },
     { name: "Blog", href: "/blog" },
     { name: "Community", href: "/community" },
@@ -37,9 +38,8 @@ export function SiteHeader() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -81,9 +81,8 @@ export function SiteHeader() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
-                }`}
+                className={`flex items-center text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                  }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

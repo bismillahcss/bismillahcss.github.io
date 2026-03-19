@@ -52,10 +52,10 @@ export default function DocsPage() {
               href: "/docs/installation",
             },
             {
-              title: "Utility Classes",
-              description: "Learn about the utility-first workflow and explore all available classes.",
+              title: "UI Library",
+              description: "Explore the full UI library with interactive primitives and core design logic.",
               icon: Zap,
-              href: "/docs/utility-classes/layout",
+              href: "/docs/ui-library",
             },
             {
               title: "Components",
@@ -64,10 +64,10 @@ export default function DocsPage() {
               href: "/docs/components",
             },
             {
-              title: "Customization",
-              description: "Learn how to customize themes, extend the framework and create your own design system.",
+              title: "Advanced Ecosystem",
+              description: "Integrations for AI context (MCP), component registries, and configuration schemas.",
               icon: Palette,
-              href: "/docs/customization/theming",
+              href: "/docs/ecosystem/mcp",
             },
           ].map((item, index) => (
             <AnimatedCard key={item.title} index={index}>

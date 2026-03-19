@@ -56,6 +56,23 @@ const sidebarItems = [
     ],
   },
   {
+    title: "UI Library & Primitives",
+    items: [
+      { title: "Introduction", href: "/docs/ui-library" },
+      { title: "Motion Primitives", href: "/docs/ui-library/primitives" },
+      { title: "Icons Library", href: "/docs/ui-library/icons" },
+      { title: "Theme Presets", href: "/docs/ui-library/presets" },
+    ],
+  },
+  {
+    title: "Advanced Ecosystem",
+    items: [
+      { title: "MCP (AI Context)", href: "/docs/ecosystem/mcp" },
+      { title: "Registry", href: "/docs/ecosystem/registry" },
+      { title: "Schema & Types", href: "/docs/ecosystem/schema" },
+    ],
+  },
+  {
     title: "Customization",
     items: [
       { title: "Theming", href: "/docs/customization/theming" },
