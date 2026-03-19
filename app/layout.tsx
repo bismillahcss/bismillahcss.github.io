@@ -13,10 +13,56 @@ import "@/app/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BismillahCSS - The Next-Gen CSS Framework",
+  metadataBase: new URL("https://bismillahcss.github.io"),
+  title: {
+    default: "BismillahCSS - The Next-Gen CSS Framework",
+    template: "%s | BismillahCSS",
+  },
   description: "BismillahCSS is a fast, lightweight, utility-first CSS framework for modern web development. Developed by Mubashir Ali (Bioinformatician) as part of the Code with Bismillah initiative.",
-  keywords: "CSS framework, utility-first CSS, modern web development, lightweight CSS, bismillahcss frontend, tailwindcss-alternative, css-framework, utility-classes, future-css, lightweight-css, advanced-css, utility-first, responsive-css, bismillahcss framework, bismillahcss utility-first, bismillahcss lightweight, code-with-bismillah, bismillahcss components, bismillahcss utilities, bismillahcss responsive, bismillahcss customization, bismillahcss theming, bismillahcss design system, bismillahcss typography, bismillahcss grid, bismillahcss flexbox, bismillahcss animations, bismillahcss transitions, Mubashir Ali, Mubashir Ali Bioinformatician, Code with Bismillah, bioinformatics CSS, computational biology framework",
-  authors: [{ name: "Mubashir Ali", url: "https://codewithbismillah.online" }],
+  keywords: [
+    "CSS framework",
+    "utility-first CSS",
+    "modern web development",
+    "lightweight CSS",
+    "bismillahcss frontend",
+    "tailwindcss-alternative",
+    "css-framework",
+    "utility-classes",
+    "future-css",
+    "lightweight-css",
+    "advanced-css",
+    "utility-first",
+    "responsive-css",
+    "bismillahcss framework",
+    "bismillahcss utility-first",
+    "bismillahcss lightweight",
+    "code-with-bismillah",
+    "bismillahcss components",
+    "bismillahcss utilities",
+    "bismillahcss responsive",
+    "bismillahcss customization",
+    "bismillahcss theming",
+    "bismillahcss design system",
+    "bismillahcss typography",
+    "bismillahcss grid",
+    "bismillahcss flexbox",
+    "bismillahcss animations",
+    "bismillahcss transitions",
+    "Mubashir Ali",
+    "Mubashir Ali Bioinformatician",
+    "Code with Bismillah",
+    "bioinformatics CSS",
+    "computational biology framework",
+    "open source css framework",
+    "css utility library",
+    "best tailwind alternative 2025",
+    "high performance css"
+  ],
+  authors: [{ name: "Mubashir Ali", url: "https://mubashirali.vercel.app" }],
+  creator: "Mubashir Ali",
+  publisher: "Code with Bismillah",
+  category: "technology",
+  classification: "Web Development Framework",
   verification: {
     google: "GhJ96yf5IMVcGgy8dgYiIHlTQJxeE6UnaTe4xusCl1k",
   },
@@ -30,7 +76,7 @@ export const metadata: Metadata = {
         url: "/images/bismillah-logo.png",
         width: 1200,
         height: 630,
-        alt: "BismillahCSS Preview",
+        alt: "BismillahCSS - Modern Utility-First CSS Framework",
       },
     ],
     locale: "en_US",
@@ -41,6 +87,7 @@ export const metadata: Metadata = {
     title: "BismillahCSS - Fast & Lightweight Utility-First CSS Framework",
     description: "Build modern, responsive websites faster with BismillahCSS.",
     images: ["/images/bismillah-logo.png"],
+    creator: "@bismillahcss",
   },
   robots: {
     index: true,
@@ -48,14 +95,30 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
     canonical: "https://bismillahcss.github.io/",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
+};
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
@@ -67,7 +130,48 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="GhJ96yf5IMVcGgy8dgYiIHlTQJxeE6UnaTe4xusCl1k" />
+        {/* Framework Stylesheets */}
+        <link rel="stylesheet" href="/bismillah.css" />
+        <link rel="stylesheet" href="/attractive.css" />
+
+        {/* Structured Data for SoftwareSourceCode */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareSourceCode",
+              "name": "BismillahCSS Framework",
+              "description": "A post-utility, intent-driven design system and CSS framework for building modern web applications.",
+              "programmingLanguage": "CSS",
+              "codeRepository": "https://github.com/bismillahcss",
+              "license": "https://opensource.org/licenses/MIT",
+              "version": "1.9.0",
+              "author": {
+                "@type": "Person",
+                "name": "Mubashir Ali"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "BismillahCSS Official",
+              "url": "https://bismillahcss.github.io/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://bismillahcss.github.io/docs/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
+
       <body className={inter.className}>
         <script
           type="application/ld+json"
@@ -97,6 +201,22 @@ export default function RootLayout({
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "BismillahCSS",
+              "url": "https://bismillahcss.github.io/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://bismillahcss.github.io/docs?q={search_term_string}",
+                "query-input": "required name=search_term_string"
               }
             })
           }}

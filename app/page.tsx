@@ -8,6 +8,15 @@ import { HeroSection } from "@/components/hero-section"
 import { PageTransition } from "@/components/page-transition"
 import { FuturisticBackground } from "@/components/futuristic-background"
 import { AnimatedGradientText } from "@/components/animated-gradient-text"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "BismillahCSS - The Next-Gen CSS Framework",
+  description: "BismillahCSS is a fast, lightweight, utility-first CSS framework for modern web development. Developed as part of the Code with Bismillah initiative.",
+  alternates: {
+    canonical: "https://bismillahcss.github.io/",
+  },
+}
 
 export default function Home() {
   return (
@@ -40,6 +49,12 @@ export default function Home() {
             <AnimatedGradientText>Try it yourself</AnimatedGradientText>
           </h2>
           <CodePlayground />
+          <div className="mt-10 text-center">
+            <Link href="/showcase" className="inline-flex items-center text-primary font-semibold hover:underline group">
+              Explore the Visual Showcase
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
 
         <div className="relative my-20 text-center">

@@ -1,16 +1,16 @@
 "use client"
 import React from 'react'
 import { useState } from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { PageTransition } from "@/components/page-transition"
-import { FuturisticBackground } from "@/components/futuristic-background"
-import { AnimatedGradientText } from "@/components/animated-gradient-text"
-import { UtilitySection } from "@/components/utility-section"
-import { CodeBlock } from "@/components/code-block"
-import { GlowButton } from "@/components/glow-button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
+import { PageTransition } from "../../components/page-transition"
+import { FuturisticBackground } from "../../components/futuristic-background"
+import { AnimatedGradientText } from "../../components/animated-gradient-text"
+import { UtilitySection } from "../../components/utility-section"
+import { CodeBlock } from "../../components/code-block"
+import { GlowButton } from "../../components/glow-button"
 import Link from "next/link"
 
-export default function TailwindUtilitiesPage() {
+export default function BismillahUtilitiesPage() {
   const [activeCategory, setActiveCategory] = useState("layout")
 
   const categories = [

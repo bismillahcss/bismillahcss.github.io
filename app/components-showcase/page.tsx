@@ -124,6 +124,29 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import Link from "next/link"
+import {
+  HeroUltra,
+  NavbarUltra,
+  FeatureCardsUltra,
+  SidebarUltra,
+  GlowButtonsUltra,
+  DashboardUltra,
+  PricingUltra,
+  TableUltra,
+  GlassButtonUltra,
+  BadgeNeonUltra,
+  CyberInputUltra,
+  GradientCardUltra,
+  AuroraBgElite,
+  TooltipCyberElite,
+  InputEliteUltra,
+  CardFloatElite,
+  CardRoyalElite,
+  RoyalSilkButton,
+  CardPrismElite,
+  ProgressVaporElite,
+  CardVaporElite
+} from "@/components/ultra-components"
 
 export default function ComponentsShowcasePage() {
   const [activeCategory, setActiveCategory] = useState("buttons")
@@ -142,6 +165,7 @@ export default function ComponentsShowcasePage() {
     { id: "data-display", name: "Data Display" },
     { id: "layout", name: "Layout" },
     { id: "special", name: "Special Effects" },
+    { id: "ultra", name: "Ultra Components" },
   ]
 
   // Sample data for tables
@@ -1749,6 +1773,204 @@ export default function ComponentsShowcasePage() {
               </section>
             </TabsContent>
 
+            {/* Ultra Components Section */}
+            <TabsContent value="ultra" className="space-y-12">
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold">Ultra Primitives</h2>
+                <div className="grid grid-cols-1 gap-12">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Hero Ultra</CardTitle>
+                      <CardDescription>Premium immersive hero section</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 border rounded-md overflow-hidden bg-black">
+                      <HeroUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Navbar Ultra</CardTitle>
+                      <CardDescription>Glassy futuristic navigation</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-4 bg-slate-900">
+                      <NavbarUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Pricing Ultra</CardTitle>
+                      <CardDescription>Neon-accented conversion cards</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 border rounded-md overflow-hidden bg-[#050507]">
+                      <PricingUltra />
+                    </CardContent>
+                  </Card>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Sidebar Ultra</CardTitle>
+                        <CardDescription>Command center lateral nav</CardDescription>
+                      </CardHeader>
+                      <CardContent className="p-4 bg-slate-950 flex justify-center">
+                        <SidebarUltra />
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Glow Buttons Ultra</CardTitle>
+                        <CardDescription>Intense neon action states</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <GlowButtonsUltra />
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Dashboard Ultra</CardTitle>
+                      <CardDescription>Full spatial application layout</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 border rounded-md overflow-hidden">
+                      <DashboardUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Table Ultra</CardTitle>
+                      <CardDescription>Polished data grid for metrics</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-4 bg-black">
+                      <TableUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Feature Cards Ultra</CardTitle>
+                      <CardDescription>Spatial logic content grid</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <FeatureCardsUltra />
+                    </CardContent>
+                  </Card>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Glass Buttons & Badges</CardTitle>
+                        <CardDescription>Backdrop-blur actions and neon indicators</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <GlassButtonUltra />
+                        <BadgeNeonUltra />
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Cyber Inputs</CardTitle>
+                        <CardDescription>Neural identification fields</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <CyberInputUltra />
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Ultra Gradient Cards</CardTitle>
+                      <CardDescription>Liquid border depth effect</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <TableUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Sidebar Architecture</CardTitle>
+                      <CardDescription>Extraordinary navigation primitive</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 border rounded-md overflow-hidden">
+                      <SidebarUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>System Dashboard</CardTitle>
+                      <CardDescription>Extraordinary command center layout</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 border rounded-md overflow-hidden">
+                      <DashboardUltra />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Glassmorphic Buttons & Interactive PRs</CardTitle>
+                      <CardDescription>Extraordinary animated ambient lighting environment</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 border rounded-md overflow-hidden bg-black">
+                      <AuroraBgElite />
+                    </CardContent>
+                  </Card>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Cyber Tooltips & Labels</CardTitle>
+                        <CardDescription>Bismillah Extraordinary floating information nodes</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <TooltipCyberElite />
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Elite Inputs with Animations</CardTitle>
+                        <CardDescription>Extraordinary interactive border logic</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <InputEliteUltra />
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Floating Glass Cards (Defying Gravity)</CardTitle>
+                      <CardDescription>Extraordinary animated atmospheric levitation primitives</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 bg-[#050507]">
+                      <CardFloatElite />
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Royal Majesty (Imperial Tier)</CardTitle>
+                      <CardDescription>Extraordinary gold-light architecture with silk text</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 bg-black overflow-hidden border-yellow-500/20">
+                      <CardRoyalElite />
+                      <div className="p-8 border-t border-yellow-500/10">
+                        <RoyalSilkButton />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </section>
+            </TabsContent>
+
             {/* Special Effects Section */}
             <TabsContent value="special" className="space-y-12">
               <section className="space-y-4">
@@ -1974,7 +2196,7 @@ function LogOut(props: React.ComponentProps<"svg">) {
   )
 }
 
-function Share(props : React.ComponentProps<"svg">) {
+function Share(props: React.ComponentProps<"svg">) {
   return (
     <svg
       {...props}

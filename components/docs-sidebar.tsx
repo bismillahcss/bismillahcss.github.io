@@ -46,6 +46,16 @@ const sidebarItems = [
     ],
   },
   {
+    title: "Ultra Components",
+    items: [
+      { title: "Overview", href: "/docs/ultra" },
+      { title: "Hero Ultra", href: "/docs/ultra/hero" },
+      { title: "Navbar Ultra", href: "/docs/ultra/navbar" },
+      { title: "Pricing Ultra", href: "/docs/ultra/pricing" },
+      { title: "Dashboard Ultra", href: "/docs/ultra/dashboard" },
+    ],
+  },
+  {
     title: "Customization",
     items: [
       { title: "Theming", href: "/docs/customization/theming" },

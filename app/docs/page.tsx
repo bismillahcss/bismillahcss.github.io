@@ -13,6 +13,29 @@ export const metadata: Metadata = {
 export default function DocsPage() {
   return (
     <PageTransition>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://bismillahcss.github.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Documentation",
+                "item": "https://bismillahcss.github.io/docs"
+              }
+            ]
+          })
+        }}
+      />
       <div className="max-w-3xl">
         <h1 className="text-3xl font-bold tracking-tight">Documentation</h1>
         <p className="mt-4 text-lg text-muted-foreground">
